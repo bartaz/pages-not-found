@@ -1,0 +1,23 @@
+{
+  "name": "book",
+  "version": "0.0.1",
+  "description": "The Book of Pages Not Found",
+  "main": "index.html",
+  "scripts": {
+    "build": "./build.sh",
+    "watch": "onchange 'src/*' -i -- npm run build",
+    "zip": "npm run build && rm -f book.zip && zip -X book.zip index.html"
+  },
+  "keywords": [
+    "js13kgames"
+  ],
+  "author": "Bartek Szopka",
+  "license": "MIT",
+  "devDependencies": {
+    "cssnano": "^4.1.10",
+    "js-yaml": "^3.14.0",
+    "onchange": "^7.0.2",
+    "postcss-cli": "^7.1.1",
+    "uglify-js": "^3.10.2"
+  }
+}

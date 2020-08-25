@@ -1,0 +1,28 @@
+body {
+    font-family: Goudy Old Style,Garamond,Big Caslon,Times New Roman,serif;
+    /* font-family: Georgia,Times,Times New Roman,serif; */
+}
+
+article {
+    line-height: 1.5;
+    margin: 0 auto;
+    max-width: 28rem;
+    text-align: justify;
+}
+
+article p {
+    text-indent: 2em;
+}
+
+article p:first-of-type {
+    text-indent: 0;
+}
+
+article p:first-of-type:first-letter {
+    float: left;
+    font-weight: bold;
+    font-size: 3.5em;
+    line-height: 0.65;
+    padding: 0.1em 0.05em 0 0;
+    text-transform: uppercase;
+}
