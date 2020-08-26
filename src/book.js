@@ -10,7 +10,10 @@ var invEl = document.querySelector(".inventory");
 function renderPage(page) {
   page = pages[page];
 	textEl.innerHTML = '<p>' + page.text.replace(/\n/g,'<p>');
-  if (page.theEnd) {
+
+  var theEnd = !page.choices;
+
+  if (theEnd) {
     textEl.innerHTML += "THE END";
   }
 
@@ -34,7 +37,15 @@ function renderPage(page) {
   if (page.add) {
     inventory.push(page.add)
   }
-  if (page.theEnd) {
+  if (page.remove) {
+    page.remove.forEach(function(item) {
+      var index = inventory.indexOf(item);
+      if (index > -1) {
+        inventory.splice(index, 1);
+      }
+    })
+  }
+  if (theEnd) {
     inventory = [];
   }
 
