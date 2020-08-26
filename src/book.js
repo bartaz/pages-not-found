@@ -7,14 +7,29 @@ var textEl = document.querySelector(".content");
 var choicesEl = document.querySelector(".choices");
 var invEl = document.querySelector(".inventory");
 
+var pagesFound = [];
+
 function renderPage(page) {
-  page = pages[page];
-	textEl.innerHTML = '<p>' + page.text.replace(/\n/g,'<p>');
+  pagesFound.push(page);
+  var isToc = page == 'toc';
+  if (isToc) {
+    page = {
+      choices: Object.keys(pages)
+    }
+  } else {
+    page = pages[page];
+  }
 
   var theEnd = !page.choices;
 
-  if (theEnd) {
-    textEl.innerHTML += "THE END";
+  if (page.text) {
+    textEl.innerHTML = '<p>' + page.text.replace(/\n/g,'<p>');
+
+    if (theEnd) {
+      textEl.innerHTML += "<p><a href='#' data-link='toc'>THE END</a>";
+    }
+  } else {
+    textEl.innerHTML = "";
   }
 
   if (page.choices) {
@@ -23,8 +38,11 @@ function renderPage(page) {
       var link = pages[id];
       var page = Object.keys(pages).indexOf(id);
       var isAvailable = !link.requires || inventory.indexOf(link.requires) >= 0;
+      var isFound = pagesFound.indexOf(id) >= 0;
 
-      if (isAvailable) {
+      if (isToc && !isFound) {
+        return '<li>Page not found' + '... [' + page + ']</a></li>';
+      } else if (isAvailable || isToc) {
         return '<li><a href="#" data-link="' + id +'">' + link.title + '... [' + page + ']</a></li>';
       } else {
         return '<li>' + link.title + '...</li>'
@@ -50,7 +68,7 @@ function renderPage(page) {
   }
 
   if (inventory.length) {
-    invEl.innerHTML = "ITEMS:" + inventory.join();
+    invEl.innerHTML = "ITEMS: " + inventory.join();
   } else {
     invEl.innerHTML = "";
   }

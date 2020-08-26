@@ -1,6 +1,7 @@
 intro:
+  title: "In times gone"
   text: |-
-    In times gone our great grandmothers and their grandmothers before them, told their children wonderful stories of love and envy, bravery and treachery, magic and plain good deeds. But with every generation, these stories faded in the memory and the print faded away from the pages.
+    In times gone our great-grandmothers and their grandmothers before them, told their children wonderful stories of love and envy, bravery and treachery, magic and plain good deeds. But with every generation, these stories faded in the memory and the print faded away from the pages.
     You must explore this book and uncover these long forgotten stories. Find the shape of how they've been, or form them how they could be, and fill these pages with the ink long gone...
   choices:
     - 'once'
