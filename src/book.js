@@ -1,16 +1,38 @@
 var pages = PAGES;
 
-var currentPage = 'intro';
-var inventory = [];
-
 var textEl = document.querySelector(".content");
 var choicesEl = document.querySelector(".choices");
-var invEl = document.querySelector(".inventory");
+var invEl = document.querySelector(".supply");
 
-var pagesFound = [];
+// GAME DATA
+function readGameData() {
+  var gameData;
+
+  try {
+    gameData = JSON.parse(localStorage.getItem('THE_BOOK_OF_PAGES_NOT_FOUND_DATA'));
+  } catch(e) {
+    // ignore and return default
+  }
+
+  return gameData || { found: [], current: 'intro', supply: [] };
+}
+
+function saveGameData(data) {
+  try {
+    localStorage.setItem('THE_BOOK_OF_PAGES_NOT_FOUND_DATA', JSON.stringify(data));
+  } catch (e) {
+    // silently ignore
+  }
+}
+
+var data = readGameData();
+var current = data.current;
+var found = data.found;
+var supply = data.supply;
 
 function renderPage(page) {
-  pagesFound.push(page);
+  current = page;
+  found.push(page);
   var isToc = page == 'toc';
   if (isToc) {
     page = {
@@ -36,8 +58,8 @@ function renderPage(page) {
     choicesEl.innerHTML = page.next.map(function(id) {
       var link = pages[id];
       var page = Object.keys(pages).indexOf(id);
-      var isAvailable = !link.need || inventory.indexOf(link.need) >= 0;
-      var isFound = pagesFound.indexOf(id) >= 0;
+      var isAvailable = !link.need || supply.indexOf(link.need) >= 0;
+      var isFound = found.indexOf(id) >= 0;
 
       if (isToc && !isFound) {
         return '<li>Page not found' + '... [' + page + ']</a></li>';
@@ -52,29 +74,30 @@ function renderPage(page) {
   }
 
   if (page.gain) {
-    inventory.push(page.gain)
+    supply.push(page.gain)
   }
   if (page.lose) {
     page.lose.forEach(function(item) {
-      var index = inventory.indexOf(item);
+      var index = supply.indexOf(item);
       if (index > -1) {
-        inventory.splice(index, 1);
+        supply.splice(index, 1);
       }
     })
   }
   if (theEnd) {
-    inventory = [];
+    supply = [];
   }
 
-  if (inventory.length) {
-    invEl.innerHTML = "ITEMS: " + inventory.join();
+  if (supply.length) {
+    invEl.innerHTML = "ITEMS: " + supply.join();
   } else {
     invEl.innerHTML = "";
   }
 
+  saveGameData({ current: current, supply: supply, found: found });
 }
 
-renderPage('intro');
+renderPage(current);
 
 document.addEventListener('click', function(event) {
 	var target = event.target;
