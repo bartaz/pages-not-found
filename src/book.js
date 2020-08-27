@@ -31,7 +31,7 @@ var current = data.current;
 var found = data.found;
 var supply = data.supply;
 
-function renderPage(page) {
+function renderPage(page, isInit) {
   current = page;
   found.push(page);
 
@@ -82,7 +82,7 @@ function renderPage(page) {
     choicesEl.innerHTML = "";
   }
 
-  if (page.gain) {
+  if (page.gain && !isInit) {
     supply.push(page.gain)
   }
   if (page.lose) {
@@ -106,7 +106,7 @@ function renderPage(page) {
   saveGameData({ current: current, supply: supply, found: found });
 }
 
-renderPage(current);
+renderPage(current, true);
 
 document.addEventListener('click', function(event) {
 	var target = event.target;
