@@ -3,48 +3,35 @@
 * { box-sizing: border-box }
 
 body {
-    font: 18px/1.5 Goudy Old Style,Garamond,Big Caslon,Times New Roman,serif;
-    /* font-family: Georgia,Times,Times New Roman,serif; */
+    font: 18px/1.5 Goudy Old Style,Garamond,Times New Roman,serif;
     background-color: #112;
     margin: 0;
 }
 
-.book {
-    background: #fffff1;
-    color: #000;
-    padding: 2em 4em 2em 5em;
-    margin: 1em;
-    margin-left: 0;
-    position: relative;
-    min-height: calc(100vh - 2em);
+/* cover */
+.cover {
+    background-color: #841;
+    padding: 1em 1em 1em 0;
     max-width: 40em;
 }
 
-/* cover */
-.book:before {
-    background-color: #841;
-    bottom: -1em;
-    content: '';
-    left: 0;
-    position: absolute;
-    right: -1em;
-    top: -1em;
-    z-index: -1;
-}
-
-.book:after {
+.cover:after {
     background: linear-gradient(to right, rgba(0,0,0,0) 0%,rgba(0,0,0,0.2) 48%,rgba(0,0,0,0.5) 49%,rgba(0,0,0,0.6) 50%,rgba(0,0,0,0.5) 51%,rgba(0,0,0,0.2) 52%,rgba(0,0,0,0) 100%);
-    bottom: -1em;
+    bottom: 0;
     content: '';
     left: 1em;
     position: absolute;
-    top: -1em;
+    top: 0;
     transform: translate(-50%,0);
     width: 4em;
-    z-index: 1;
 }
 
 .page {
+    background: #fffff1;
+    color: #000;
+    padding: 2em 4em 2em 5em;
+    position: relative;
+    min-height: calc(100vh - 2em);
     text-align: justify;
 }
 
