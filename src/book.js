@@ -38,6 +38,8 @@ function renderPage(page) {
   var pageNo = Object.keys(pages).indexOf(page);
   if (pageNo > 0) {
     pageEl.innerHTML = pageNo;
+  } else {
+    pageEl.innerHTML = ""
   }
 
   var isToc = page == 'toc';
@@ -69,11 +71,11 @@ function renderPage(page) {
       var isFound = found.indexOf(id) >= 0;
 
       if (isToc && !isFound) {
-        return '<li>Page not found' + '... [' + page + ']</a></li>';
+        return '<li class="locked"><span>Page not found</span><span>' + page + '</span></li>';
       } else if (isAvailable || isToc) {
-        return '<li><a href="#" data-next="' + id +'">' + link.clip + '... [' + page + ']</a></li>';
+        return '<li><a href="#" data-next="' + id +'"><span>' + link.clip + '</span><span>' + page + '</span></a></li>';
       } else {
-        return '<li>' + link.clip + '...</li>'
+        return '<li class="locked" title="Requires a ' + link.need + '"><span>' + link.clip + '</span><span>???</span></li>'
       }
     }).join("");
   } else {

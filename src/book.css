@@ -1,3 +1,5 @@
+/* book styles inspired by Book Layout by Erin E. Sullivan https://codepen.io/erinesullivan/pen/gxdbzp */
+
 * { box-sizing: border-box }
 
 body {
@@ -69,3 +71,36 @@ p:first-of-type:first-letter {
     line-height: 0.65;
     padding: 0.1em 0.05em 0 0;
 }
+
+/* dot leaders based on https://www.w3.org/Style/Examples/007/leaders.en.html */
+
+ul {
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+}
+
+li { margin-bottom: 0.5em }
+.locked { opacity: 0.5; cursor: not-allowed }
+
+li:after {
+    float: left;
+    width: 0;
+    content: "..............................";
+    letter-spacing: 1em;
+}
+li span:first-child {
+    padding-right: 0.3em;
+    background: #fffff1;
+}
+li span + span {
+    float: right;
+    padding-left: 0.3em;
+    background: #fffff1;
+    position: relative;
+    /* z-index: 1; */
+}
+
+a, a:visited { color: #000; text-decoration: none }
+a:hover, a:focus { text-decoration: underline }
+a span { pointer-events: none; }
