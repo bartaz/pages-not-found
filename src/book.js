@@ -3,6 +3,7 @@ var pages = PAGES;
 var textEl = document.querySelector(".content");
 var choicesEl = document.querySelector(".choices");
 var invEl = document.querySelector(".supply");
+var pageEl = document.querySelector("#pageNo");
 
 // GAME DATA
 function readGameData() {
@@ -33,6 +34,12 @@ var supply = data.supply;
 function renderPage(page) {
   current = page;
   found.push(page);
+
+  var pageNo = Object.keys(pages).indexOf(page);
+  if (pageNo > 0) {
+    pageEl.innerHTML = pageNo;
+  }
+
   var isToc = page == 'toc';
   if (isToc) {
     page = {
