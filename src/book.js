@@ -98,7 +98,7 @@ function renderPage(page) {
   }
 
   if (supply.length) {
-    invEl.innerHTML = "ITEMS: " + supply.join();
+    invEl.innerHTML = supply.map(function(item){ return "<span>" + item + "</span>" }).join("");
   } else {
     invEl.innerHTML = "";
   }
