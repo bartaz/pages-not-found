@@ -15,7 +15,7 @@ function readGameData() {
     // ignore and return default
   }
 
-  return gameData || { found: [], current: 'intro', supply: [] };
+  return gameData || { found: {}, current: 'intro', supply: [] };
 }
 
 function saveGameData(data) {
@@ -33,7 +33,7 @@ var supply = data.supply;
 
 function renderPage(page, isInit) {
   current = page;
-  found.push(page);
+  found[page] = 1;
 
   var pageNo = Object.keys(pages).indexOf(page);
   if (pageNo > 0) {
@@ -64,18 +64,17 @@ function renderPage(page, isInit) {
   }
 
   if (page.next) {
-    choicesEl.innerHTML = page.next.map(function(id) {
-      var link = pages[id];
-      var page = Object.keys(pages).indexOf(id);
-      var isAvailable = !link.need || supply.indexOf(link.need) >= 0;
-      var isFound = found.indexOf(id) >= 0;
+    choicesEl.innerHTML = page.next.map(function(nextPageId) {
+      var nextPage = pages[nextPageId];
+      var nextPageNo = Object.keys(pages).indexOf(nextPageId);
+      var isAvailable = !nextPage.need || supply.indexOf(nextPage.need) >= 0;
 
-      if (isToc && !isFound) {
-        return '<li class="locked"><span>Page not found</span><span>' + page + '</span></li>';
+      if (isToc && !found[nextPageId]) {
+        return '<li class="locked"><span>Page not found</span><span>' + nextPageNo + '</span></li>';
       } else if (isAvailable || isToc) {
-        return '<li><a href="#" data-next="' + id +'"><span>' + link.clip + '</span><span>' + page + '</span></a></li>';
+        return '<li><a href="#" data-next="' + nextPageId +'"><span>' + nextPage.clip + '</span><span>' + nextPageNo + '</span></a></li>';
       } else {
-        return '<li class="locked" title="Requires a ' + link.need + '"><span>' + link.clip + '</span><span>???</span></li>'
+        return '<li class="locked" title="Requires a ' + nextPage.need + '"><span>' + nextPage.clip + '</span><span>???</span></li>'
       }
     }).join("");
   } else {
@@ -83,13 +82,19 @@ function renderPage(page, isInit) {
   }
 
   if (page.gain && !isInit) {
-    supply.push(page.gain)
+    // TODO: to replace crossed item when gaining it again ~20B
+    // var index = supply.indexOf('<s>' + item + '</s>');
+    // if (index) {
+    //   supply[index] = item;
+    // } else {
+      supply.push(page.gain)
+    // }
   }
   if (page.lose) {
     page.lose.forEach(function(item) {
       var index = supply.indexOf(item);
       if (index > -1) {
-        supply.splice(index, 1);
+        supply[index] = '<s>' + item + '</s>'
       }
     })
   }
