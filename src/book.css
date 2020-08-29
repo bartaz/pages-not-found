@@ -8,9 +8,10 @@ body {
     margin: 0;
 }
 
-.page {
+/* page */
+#p {
     background: #fffff1;
-    color: #000;
+    /* color: #000; */
     padding: 1em;
     position: relative;
     min-height: 100vh;
@@ -18,7 +19,7 @@ body {
 }
 
 /* TODO: move to bottom of the page? */
-.head {
+#h {
     display: none;
 }
 
@@ -53,19 +54,20 @@ ul {
 }
 
 li { margin-bottom: 0.5em; clear: both; }
+/* TODO: shorted the name? change to data- */
 .locked { opacity: 0.5; cursor: not-allowed; }
 
 li:after {
     float: left;
     width: 0;
-    content: "..............................";
+    content: ".........................";
     letter-spacing: 1em;
 }
-li span:first-child {
+li :first-child {
     padding-right: 0.3em;
     background: #fffff1;
 }
-li span + span {
+li :last-child {
     float: right;
     padding-left: 0.3em;
     background: #fffff1;
@@ -73,11 +75,12 @@ li span + span {
     /* z-index: 1; */
 }
 
-a, a:visited { color: #000; text-decoration: none }
-a:hover, a:focus { text-decoration: underline }
-a span { pointer-events: none; }
+[data-next]:hover { text-decoration: underline; cursor: pointer; }
+li span { pointer-events: none; }
 
-.supply span {
+
+/* supply */
+#s span {
     display: inline-block;
     font-family: cursive;
     transform: rotate(-10deg);
@@ -85,20 +88,20 @@ a span { pointer-events: none; }
     margin-top: 1em;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 40em) {
     body {
         font-size: 20px;
         background-color: #111;
     }
 
     /* cover */
-    .cover {
+    #c {
         background-color: #841;
         padding: 1em 1em 1em 0;
         max-width: 40em;
     }
 
-    .cover:after {
+    #c:after {
         background: linear-gradient(to right, rgba(0,0,0,0) 0%,rgba(0,0,0,0.2) 48%,rgba(0,0,0,0.5) 49%,rgba(0,0,0,0.6) 50%,rgba(0,0,0,0.5) 51%,rgba(0,0,0,0.2) 52%,rgba(0,0,0,0) 100%);
         bottom: 0;
         content: '';
@@ -109,12 +112,12 @@ a span { pointer-events: none; }
         width: 4em;
     }
 
-    .page {
+    #p {
         padding:  2em 4em 2em 5em;
         min-height: calc(100vh - 2em);
     }
 
-    .head {
+    #h {
         display: flex;
         justify-content: space-between;
         font-variant-caps: small-caps;
@@ -122,7 +125,7 @@ a span { pointer-events: none; }
         margin-bottom: 1em;
     }
 
-    .supply {
+    #s {
         position: absolute;
         right: 0;
         bottom: 20%;
@@ -133,20 +136,20 @@ a span { pointer-events: none; }
 }
 
 /* large screen styles ~50B */
-@media (min-width: 1200px) {
+@media (min-width: 80em) {
     body { margin: 1em }
     /* cover */
-    .cover {
+    #c {
         padding: 1em;
         max-width: 80em;
         margin: 0 auto;
     }
 
-    .cover:after {
+    #c:after {
         left: 50%;
     }
 
-    .page {
+    #p {
         padding-left: calc(50% + 2em);
         min-height: calc(100vh - 4em);
     }

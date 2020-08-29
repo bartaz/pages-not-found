@@ -1,21 +1,18 @@
 var pages = PAGES;
 
-var textEl = document.querySelector(".content");
-var choicesEl = document.querySelector(".choices");
-var invEl = document.querySelector(".supply");
-var pageEl = document.querySelector("#pageNo");
+var textEl = document.querySelector("#t");
+var choicesEl = document.querySelector("ul");
+var supplyEl = document.querySelector("#s");
+var pageEl = document.querySelector("b");
 
 // GAME DATA
 function readGameData() {
-  var gameData;
-
   try {
-    gameData = JSON.parse(localStorage.getItem('THE_BOOK_OF_PAGES_NOT_FOUND_DATA'));
+    return JSON.parse(localStorage.getItem('THE_BOOK_OF_PAGES_NOT_FOUND_DATA'));
   } catch(e) {
     // ignore and return default
   }
-
-  return gameData || { found: {}, current: 'intro', supply: [] };
+  return { found: {}, current: 'intro', supply: [] };
 }
 
 function saveGameData(data) {
@@ -57,7 +54,7 @@ function renderPage(page, isInit) {
     textEl.innerHTML = '<p>' + page.text.replace(/\n/g,'<p>');
 
     if (theEnd) {
-      textEl.innerHTML += "<p><a href='#' data-next='toc'>THE END</a>";
+      textEl.innerHTML += "<p><a data-next=toc>THE END</a>";
     }
   } else {
     textEl.innerHTML = "";
@@ -70,11 +67,11 @@ function renderPage(page, isInit) {
       var isAvailable = !nextPage.need || supply.indexOf(nextPage.need) >= 0;
 
       if (isToc && !found[nextPageId]) {
-        return '<li class="locked"><span>Page not found</span><span>' + nextPageNo + '</span></li>';
+        return '<li class=locked><span>Page not found</span><span>' + nextPageNo + '</span></li>';
       } else if (isAvailable || isToc) {
-        return '<li><a href="#" data-next="' + nextPageId +'"><span>' + nextPage.clip + '</span><span>' + nextPageNo + '</span></a></li>';
+        return '<li data-next=' + nextPageId +'><span>' + nextPage.clip + '</span><span>' + nextPageNo + '</span></li>';
       } else {
-        return '<li class="locked" title="Requires a ' + nextPage.need + '"><span>' + nextPage.clip + '</span><span>???</span></li>'
+        return '<li class=locked title="Requires a ' + nextPage.need + '"><span>' + nextPage.clip + '</span><span>???</span></li>'
       }
     }).join("");
   } else {
@@ -103,9 +100,9 @@ function renderPage(page, isInit) {
   }
 
   if (supply.length) {
-    invEl.innerHTML = supply.map(function(item){ return "<span>" + item + "</span>" }).join("");
+    supplyEl.innerHTML = supply.map(function(item){ return "<span>" + item + "</span>" }).join("");
   } else {
-    invEl.innerHTML = "";
+    supplyEl.innerHTML = "";
   }
 
   saveGameData({ current: current, supply: supply, found: found });
