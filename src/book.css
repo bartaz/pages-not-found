@@ -55,6 +55,13 @@ p:first-of-type:first-letter {
     padding: 0.1em 0.05em 0 0;
 }
 
+.q { position: relative; }
+.q:before {
+    content: '“';
+    position: absolute;
+    left: -0.5em;
+}
+
 /* dot leaders based on https://www.w3.org/Style/Examples/007/leaders.en.html */
 
 hr {

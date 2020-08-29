@@ -53,8 +53,16 @@ function renderPage(page, isInit) {
 
   document.body.className = current;
 
+  textEl.classList.remove('q');
   if (page.text) {
-    textEl.innerHTML = '<p>' + page.text.replace(/\n/g,'<p>');
+    var text = page.text;
+
+    if (text.indexOf('“') == 0) {
+      text = text.substr(1);
+      textEl.classList.add('q');
+    }
+
+    textEl.innerHTML = '<p>' + text.replace(/\n/g,'<p>');
   } else {
     textEl.innerHTML = '';
   }
