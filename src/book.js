@@ -53,10 +53,6 @@ function renderPage(page, isInit) {
 
   if (page.text) {
     textEl.innerHTML = '<p>' + page.text.replace(/\n/g,'<p>');
-
-    if (theEnd) {
-      textEl.innerHTML += "<p><a data-next=toc>THE END</a>";
-    }
   } else {
     textEl.innerHTML = "";
   }
@@ -98,7 +94,9 @@ function renderPage(page, isInit) {
     supply = [];
   }
 
-  if (page.next) {
+  if (theEnd) {
+    choicesEl.innerHTML = '<li data-next="toc"><span>THE END</span><span></span></li>'
+  } else {
     choicesEl.innerHTML = page.next.map(function(nextPageId) {
       var nextPage = pages[nextPageId];
       var nextPageNo = Object.keys(pages).indexOf(nextPageId);
@@ -117,11 +115,7 @@ function renderPage(page, isInit) {
     if (isToc) {
       choicesEl.innerHTML += '<li class=locked><span>Page not found</span><span>404</span></li>';
     }
-  } else {
-    choicesEl.innerHTML = '';
   }
-
-
 
   if (supply.length) {
     supplyEl.innerHTML = supply.map(function(item){ return "<span>" + item + "</span>" }).join("");
