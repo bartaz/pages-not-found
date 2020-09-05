@@ -18,9 +18,24 @@ body {
     text-align: justify;
 }
 
-/* TODO: move to bottom of the page? */
+/* TODO: move header to bottom of the page on small screens? */
 #h {
-    display: none;
+    display: none; /* hide on small screens */
+
+    justify-content: space-between;
+    font-variant-caps: small-caps;
+    font-size: 16px;
+}
+
+/* show header on intro page, to display the title */
+.intro #h { display: flex }
+.intro #h span {
+    font-size: 3em;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.1;
+    margin-bottom: 1em;
+    max-width: 7.5em;
 }
 
 p {
@@ -119,9 +134,6 @@ li span { pointer-events: none; }
 
     #h {
         display: flex;
-        justify-content: space-between;
-        font-variant-caps: small-caps;
-        font-size: 16px;
         margin-bottom: 1em;
     }
 

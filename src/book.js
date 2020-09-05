@@ -51,12 +51,13 @@ function renderPage(page, isInit) {
 
   var theEnd = !page.next;
 
+  document.body.className = current;
+
   if (page.text) {
     textEl.innerHTML = '<p>' + page.text.replace(/\n/g,'<p>');
   } else {
-    textEl.innerHTML = "";
+    textEl.innerHTML = '';
   }
-
 
   if (page.gain && !isInit) {
     // supply = supply.concat(page.gain)
