@@ -5,6 +5,8 @@ intro:
     You must explore this book and uncover these long forgotten stories. Find the shape of how they've been, or form them how they could be, and fill these pages with the ink long gone…
   next: [ once ]
 
+# CHAPTER IN THE CASTLE
+
 once:
   clip: Once upon a time
   text: |-
@@ -48,7 +50,15 @@ box:
   text: |-
     The box was very light and something rattled inside with every step I made down the stairs to the ball room, where all the birthday presents were gathered.
     I was a bit suspicious why the queen was so secrative about this. And why she just didn't give it to the princess herself.
-  next: [ peek, deliver ]
+  next: [ deliver, peek ]
+
+deliver:
+  clip: That was not my place to intervene
+  text: |-
+    That was not my place to intervene, so I walked down to the ballroom. The servants were kept busy decorating the tables, and musicians were already practicing for the evening. The preparations were in full swing.
+    Discretely I placed the box with the rest of the presents already sent to the princess.
+  next: [ celebrations ]
+  lose: [ emerald box, spindle ]
 
 peek:
   clip: Carefully I opened the box
@@ -65,20 +75,48 @@ warn:
   gain: spindle
   lose: [ emerald box ]
 
-surrender:
-  clip: The guards seized me
+celebrations:
+  clip: The celebrations were about to start
   text: |-
-      The guards seized me, and I was thrown into the dungeon. Long hours seemed to pass by as I was sitting on a cold stone floor, thinking about the Princess, hoping she is well and safe.
-  next: [ release ]
-  lose: [ dagger , spindle ]
+    The celebrations were about to start, so I retured for the princess and we joined her family and other guests in the throne room.
+    Everyone praised her beauty and well manners and she seemed to enjoy all the admiration. They ate and drank and were merry all the evening and if not for the worried eyes of her father, you could almost forget about the curse…
+    After the ball has ended we moved all the presents to princesses bedroom where she was joined by her father and the queen to unveil the wonders of the gifts.
+  next: [ attention ]
 
-release:
-  clip: I heard some steps approaching
+attention:
+  clip: The small emerald box was the first one
   text: |-
-    I heard some steps approaching and the cell doors opened. It was the King.
-    “We can't find the Princess,” he said. “She is nowhere in the castle. I've sent the guards out, but you know her the best. If you love your life, go and bring her home.”
-    All at once I was released and hurried out of the castle. The sun was still high when I passed the drawbridge. The Princess always wanted to be free as a bird in the forest, so I went off the beaten path and deep into the woods.
-  next: [ trap ]
+    The small emerald box was the first one was the first one that caught her attention. Princess picked up the box, opened it curiously and reached inside and revealed an item she have never seen before in her life.
+    The king was terrified when he noticed a sharp point of a spindle in princesses hand. The curse, after all, made it's way to the princess.
+  next: [ look, jump ]
+
+look:
+  clip: I looked at the queen
+  text: |-
+    I looked at the queen. She was the only one that seemed calm and content watching as princess touched the sharp point of the spindle.
+    A small drop of blood showed up on the tip of the Princess's finger. She looked at it surprised and fell, as dead, to her bed fulfilling the evil wish of the witch.
+    And it all happened so fast, that before we could move, a deep sleep fell upon not just a princess, but the king, the queen and everyone in the castle. My eyes closed and I fell to the floor…
+  next: [ down ]
+
+jump:
+  clip: Without hesitation, I jumped forward
+  text: |-
+    Without hesitation, I jumped forward and snatched the spindle from the Princess's hand.
+    “You foolish girl! How dare you interfere with destiny?” The queen was very angry. “Guards! Take her away!” she cried out before I could explain myself. Her voice echoed through the corridors and I heard the loud steps of the guards behind me.
+  gain: spindle
+  next: [ push, surrender, run ]
+
+push:
+  clip: “I am sorry, Princess”
+  text: |-
+    “I am sorry, Princess,” I said as I pushed the sharp point of the spindle against her snow-white hand.
+    A small drop of blood showed up on the tip of the Princess's finger. She looked at it surprised and fell, as dead, to her bed fulfilling the evil wish of the witch.
+    And it all happened so fast, that before we could move, a deep sleep fell upon not just a princess, but the king, the queen and everyone in the castle. My eyes closed and I fell to the floor…
+  need: spindle
+  lose: [ spindle ]
+  next: [ down ]
+
+# CHAPTER ON THE RUN
 
 run:
   clip: With the dagger in my hand
@@ -87,6 +125,14 @@ run:
     Away I ran through the corridors and down the stairs as fast as I could go. I reached the bailey panting and looked around for a way out. The gates were open awaiting the guests, but in the shadows of the keep walls, there was a well where I could hide and catch my breath.
   next: [ forest, well ]
   need: dagger
+
+forest:
+  clip: I got into the nearby forest
+  text: |-
+    I crossed the drawbridge and was running away as fast as I could until I reached the forest nearby.
+    By and by, while I was sneaking deep into the woods, I heard some horses clopping. I hid in the bushes and overheard that the guards were not looking for me, but the princess! She must have run away as well, poor girl!
+    When they were far enough I moved on. I should find the princess, but where could she be?
+  next: [ trap ]
 
 well:
   clip: I looked into the well
@@ -103,7 +149,23 @@ meadow:
     But instead of staying in the water, I fell on through the spring and came out on the other side. I found myself in a beautiful meadow. The sun was shining bright and there were thousands of flowers in blossom.
     There was a little path across the meadow, and this I followed. It led after a while to a small cottage. In the door stood an old, fierce-looking woman.
     “Oh, it's you, dear child,” she greeted me as if she knew me. “Come here and live with me. Do your duty and you will meet with my kindness.”
-  next: [ wishes, stream ]
+  next: [ stream, wishes ]
+
+stream:
+  clip: “I have no wish to obey you”
+  text: |-
+    “I have no wish to obey you,” I answered, “and no time to lose.”
+    I turned around and walked back the path through the meadow. The path ended at the stream that I tried to pass. Jumping from stone to stone I slipped. Alas! I fell under the water.
+    “That's the reward for such unkindness,” the old woman cried after me while I struggled to catch my breath.
+  next: [ moat ]
+
+moat:
+  clip: The water was dirty and smelly
+  text: |-
+    The water was dirty and smelly. It was a hassle to swim, but finally, I crawled out to the bank on the other side.
+    I was all wet and covered in mud and dirt. I laid down to have a rest and, to my surprise, I noticed a drawbridge above me! I was laying by the castle moat!
+    Two guards up on the bridge noticed me and rushed down towards me.
+  next: [ surrender ]
 
 wishes:
   clip: And so I went to live with her
@@ -130,29 +192,22 @@ again:
   lose: [ wish ]
   next: [ birthday ]
 
-stream:
-  clip: “I have no wish to obey you”
+surrender:
+  clip: The guards seized me
   text: |-
-    “I have no wish to obey you,” I answered, “and no time to lose.”
-    I turned around and walked back the path through the meadow. The path ended at the stream that I tried to pass. Jumping from stone to stone I slipped. Alas! I fell under the water.
-    “That's the reward for such unkindness,” the old woman cried after me while I struggled to catch my breath.
-  next: [ moat ]
+      The guards seized me, and I was thrown into the dungeon. Long hours seemed to pass by as I was sitting on a cold stone floor, thinking about the Princess, hoping she is well and safe.
+  next: [ release ]
+  lose: [ dagger , spindle ]
 
-moat:
-  clip: The water was dirty and smelly
+release:
+  clip: I heard some steps approaching
   text: |-
-    The water was dirty and smelly. It was a hassle to swim, but finally, I crawled out to the bank on the other side.
-    I was all wet and covered in mud and dirt. I laid down to have a rest and, to my surprise, I noticed a drawbridge above me! I was laying by the castle moat!
-    Two guards up on the bridge noticed me and rushed down towards me.
-  next: [ surrender ]
-
-forest:
-  clip: I got into the nearby forest
-  text: |-
-    I crossed the drawbridge and was running away as fast as I could until I reached the forest nearby.
-    By and by, while I was sneaking deep into the woods, I heard some horses clopping. I hid in the bushes and overheard that the guards were not looking for me, but the princess! She must have run away as well, poor girl!
-    When they were far enough I moved on. I should find the princess, but where could she be?
+    I heard some steps approaching and the cell doors opened. It was the King.
+    “We can't find the Princess,” he said. “She is nowhere in the castle. I've sent the guards out, but you know her the best. If you love your life, go and bring her home.”
+    All at once I was released and hurried out of the castle. The sun was still high when I passed the drawbridge. The Princess always wanted to be free as a bird in the forest, so I went off the beaten path and deep into the woods.
   next: [ trap ]
+
+# CHAPTER WITH DWARFS
 
 trap:
   clip: Passing through a dense thicket
@@ -169,6 +224,13 @@ talk:
     “We found her sitting under the oak by our hut at noon to-day and...” the dwarf fell silent, eyeing me with suspicion. “You silly girl!” he snarled. “I am not telling you a thing if you don't help me. You could be with them!”
     I did my best to get his beard free, but all in vain. It was held fast and all tangled. “Tell me please, where I can find the Princess. I'll get some one to help,” I begged to no avail. The dwarf was just muttering or shouting helplessly.
   next: [ search, cut, tree ]
+
+search:
+  clip: He was of no use, so I left him alone
+  text: |-
+    He was of no use, so I left him alone and went on, trying to find the Princess myself. I searched and searched, but there was no hut, no oak and no princess in sight. I went on and on, till the sun set and it began to grow dark and all at once, I saw a far-off light twinkling through the trees.
+    Glad, I walked toward the light and came to a meadow with a little cottage under a great oak tree. And in front of the hut, the Princess was talking to some old woman who handed her one of the roses from the basket.
+  next: [ rose ]
 
 cut:
   clip: I pulled my dagger and cut off the end of his beard
@@ -188,13 +250,6 @@ tree:
   next: [ follow ]
   need: wish
   lose: [ wish ]
-
-search:
-  clip: He was of no use, so I left him alone
-  text: |-
-    He was of no use, so I left him alone and went on, trying to find the Princess myself. I searched and searched, but there was no hut, no oak and no princess in sight. I went on and on, till the sun set and it began to grow dark and all at once, I saw a far-off light twinkling through the trees.
-    Glad, I walked toward the light and came to a meadow with a little cottage under a great oak tree. And in front of the hut, the Princess was talking to some old woman who handed her one of the roses from the basket.
-  next: [ rose ]
 
 follow:
   clip: Without hesitation, I hurried after
@@ -226,6 +281,23 @@ rose:
     The old woman straightened up and threw off her disguise. It indeed was the Queen herself. “It's the gift of destiny, dear Princess,” she said smiling and disappeared into the forest.
   next: [ funeral ]
 
+familiar:
+  clip: The woman looked familiar
+  text: |-
+      The woman looked familiar. Something to her eyes seemed much younger and firm than the rest of her figure. I've seen these eyes before…
+      The old woman reached to the basket and pulled out one of the roses. And then I remembered those eyes. It was the Queen!
+  next: [ rose, witch ]
+
+witch:
+  clip: Frightened, I rushed towards them crying out
+  text: |-
+    Frightened, I rushed towards them crying out. The Princess dropped the rose and stepped back.
+    “Leave her alone!” I said to the woman angrily. She straightened up and threw off her disguise. It indeed was the Queen herself.
+    “Stupid thing! You have no clue what you are dealing with! By defying the destiny, you will bring doom on us all!” she said outraged and disappeared in the shadows of the forest.
+    We burned the roses and decided to have some rest and leave at dawn. The dwarfs kept the watch outside the hut, while I rested by the sleeping Princess.
+    The light of the candle was dying out when my eyes closed.
+  next: [ court ]
+
 funeral:
   clip: Princess was lying still and lifeless
   text: |-
@@ -256,22 +328,90 @@ frog:
     We returned to the castle and lived there happily. But from time to time we would run away and visit the forest in search of the dwarfs and their little hut.
   need: wish
 
-familiar:
-  clip: The woman looked familiar
-  text: |-
-      The woman looked familiar. Something to her eyes seemed much younger and firm than the rest of her figure. I've seen these eyes before…
-      The old woman reached to the basket and pulled out one of the roses. And then I remembered those eyes. It was the Queen!
-  next: [ rose, witch ]
+# CHAPTER IN THE SLEEP
 
-witch:
-  clip: Frightened, I rushed towards them crying out
+down:
+  clip: Down, down, down
   text: |-
-    Frightened, I rushed towards them crying out. The Princess dropped the rose and stepped back.
-    “Leave her alone!” I said to the woman angrily. She straightened up and threw off her disguise. It indeed was the Queen herself.
-    “Stupid thing! You have no clue what you are dealing with! By defying the destiny, you will bring doom on us all!” she said outraged and disappeared in the shadows of the forest.
-    We burned the roses and decided to have some rest and leave at dawn. The dwarfs kept the watch outside the hut, while I rested by the sleeping Princess.
-    The light of the candle was dying out when my eyes closed.
-  next: [ court ]
+    Down, down, down… Would the fall never come to the end? Either the castle floor was very far, or I fell very slowly, for I had plenty of time to think of what just happened… Was I asleep? Should I wake up?
+    With my eyes closed I was falling down, but I never seemed to reach the stone castle floor.
+  next: [ down2, open2 ]
+
+down2:
+  clip: Down, down, down
+  text: |-
+    Down, down, down… There was nothing else to do, so I started talking to myself. “I wonder how many miles I’ve fallen by this time?” I said out loud and my words echoed around me. “I wonder if I shall fall right through the earth!” Even that it was me saying these words, they felt alien and sounded like spoken by some else.
+  next: [ down, open2 ]
+
+open2:
+  clip: I opened my eyes
+  text: |-
+    I opened my eyes and found myself falling down a very deep well… First, I tried to look down and make out what she was coming to, but it was too dark to see anything; then I looked at the sides of the well, and noticed that they were filled with cupboards and book-shelves. I tried to reach them as I passed, but I was falling too fast.
+  next: [ down, down2, open ]
+
+open:
+  clip: I opened my eyes
+  text: |-
+    I opened my eyes and found myself back in the princesses bedroom, and every one in the castle awoke as well.
+    And the princess was there, lying in her bed and some fancy dressed young man was holding her in his arms. Terrified, she pushed him away. He dropped to his knees and asked her to be his wife. He told us he is a prince from a nearby kingdom and that he has lifted the spell that caused as all to sleep for hundred of years.
+  next: [ proposal ]
+
+proposal:
+  clip: The king accepted his proposal
+  text: |-
+    The king accepted his proposal, promised him half of the kingdom for lifting the curse and the wedding was soon announced.
+    The only one unhappy about the turn of events was the Princess. She told her father and the Prince that, as grateful as she was, she does not want to be his bride.
+    The Prince got angry and threaten to invade the kingdom and take the land and the Princess by force, if she refuses.
+  next: [ locked ]
+
+locked:
+  clip: The king ordered the Princess to be locked
+  text: |-
+    The king ordered the princess to be locked in her rooms, and the wedding preparations continued.
+    “Why at last can’t I make a choice of my own?” princess cried to my shoulder. “Am I destined to be trapped in this life and this castle? Is it still this dreadful curse in the works?”
+    As the time passed and wedding day approached the princess got sadder and sadder. I knew I was the one she trusted the most, and if anyone could help her it was I.
+  next: [ grow, escape, happy ]
+
+grow:
+  clip: “I am sure you will grow to love your prince”
+  text: |-
+    “I am sure you will grow to love your prince. He is destined for you, after all,” I said trying to calm her.
+    “You are just like my father and step-mother,” Princess said bitterly and refused to speak to me again.
+    At the day of the wedding, when I finished lacing her dress, she glanced at herself in the mirror, then looked through the window and said "I just wanted to be free as a bird." She turned around, looked at me with her tearful eyes and run away.
+    The princess rushed upstairs to the top of the castle tower and jumped down into the river. For once, choosing her own destiny.
+
+escape:
+  clip: “I can help you run away, Princess”
+  text: |-
+    “I can help you run away, Princess. Hear my plan!” I said and explaned what she should do when I prepare our escape.
+    One night when the clock struck twelve and the whole castle was sleeping, I sneaked into the Princess's bedroom. She left one candle burning and was lying awake.
+    “It’s the time dear princess, now or never,” I said to her.
+  next: [ geese, hunt ]
+
+geese:
+  clip: I took the girl by the hand
+  text: |-
+    I took the girl by the hand and led her down the stairs, through kitchen and out of the castle. Through a hole in the walls we got down to the river bank and guided by the moonshine reflected in the waters we run away as fast as we can.
+    For several days we followed the river by night, hiding in the shadows of the groves we passed by during the daylight.
+    One day we've met a very old woman who was gathering some grass for her geese and wild fruit for herself. We helped her carry the load, so she invited us to stay with her.
+    And for a long time we lived there there with the old woman. Only sometimes at night the princess wept to the pillow missing her royal life and instead of tears little pearls dropped from her crying eyes.
+
+hunt:
+  clip: I pulled out the dagger
+  text: |-
+    I pulled out the dagger and we cut each other hair with it's sharp blade. We then changed to hunting dresses and cloaks, and sneaked out of the castle to the stables.
+    Near the castle was a large, dark forest, so at the dawn, unrecognized under the hoods, we joined hunting expedition into the nearby forest.
+    In the depths of the forest we left the hunters and rode away on our horses. On and on we went traveling to villages and towns living an honest and hard-working lives, free as birds.
+  need: dagger
+
+happy:
+  clip: I wish for you to live happily ever after
+  text: |-
+    "I wish for you to live happily ever after, Princess." I said, and were it my words or did she just accept that fate, the princess wedded the prince and they soon became the king and the queen of the nearby land.
+    Soon after, the young king soon died in the battle leaving her with a daughter to raise and the kingdom to rule. She lead her people well and just, so she grown to be known far and wide not only for her beauty, but for being fair and clever queen.
+  need: wish
+
+# CHAPTER WITH DEFIED DESTINY
 
 court:
   clip: When I opened them I was in the very middle of the court
@@ -333,21 +473,7 @@ asleep:
     Tempted by the size of the bed I dropped down and went fast asleep. At midnight, I was awakened by some strange noises. I felt that the bed was trembling and I started falling through the floor down into the darkness.
     In morning light coming in through a narrow window, I could finally see my surroundings. I found myself trapped in a stone cellar. On a small table, there was a book.
     I opened it and started reading. How surprised I was to find that it was about me! But before I could read any further the letters from the pages started disappearing leaving me with empty pages.
-  next: [prison, book]
-
-prison:
-  clip: With the book in my hand
-  text: |-
-    With the book in my hand I set down and waited thinking. What led me to here, could I do things differently?
-    I looked at the empty pages of the book and started to write down my story. Maybe some day someone would find it...
-
-
-book:
-  clip: “I wish I could read this book”
-  text: |-
-    “I wish I could read this book,” I thought and magically, all the letters appeared back on all the pages.
-    Will I be able to find out what I did wrong? Could this all end differently? So I started reading...
-  need: wish
+  next: [ prison, book ]
 
 bed:
   clip: Then I went into the smaller room
@@ -359,132 +485,15 @@ bed:
     The happiness was brought back to the kingdom again and the Princess could find her new destiny as the future queen.
   need: cake
 
-deliver:
-  clip: That was not my place to intervene
+prison:
+  clip: With the book in my hand
   text: |-
-    That was not my place to intervene, so I walked down to the ballroom. The servants were kept busy decorating the tables, and musicians were already practicing for the evening. The preparations were in full swing.
-    Discretely I placed the box with the rest of the presents already sent to the princess.
-  next: [ celebrations ]
-  lose: [ emerald box, spindle ]
+    With the book in my hand I set down and waited thinking. What led me to here, could I do things differently?
+    I looked at the empty pages of the book and started to write down my story. Maybe some day someone would find it...
 
-celebrations:
-  clip: The celebrations were about to start
+book:
+  clip: “I wish I could read this book”
   text: |-
-    The celebrations were about to start, so I retured for the princess and we joined her family and other guests in the throne room.
-    Everyone praised her beauty and well manners and she seemed to enjoy all the admiration. They ate and drank and were merry all the evening and if not for the worried eyes of her father, you could almost forget about the curse…
-    After the ball has ended we moved all the presents to princesses bedroom where she was joined by her father and the queen to unveil the wonders of the gifts.
-  next: [ attention ]
-
-attention:
-  clip: The small emerald box was the first one
-  text: |-
-    The small emerald box was the first one was the first one that caught her attention. Princess picked up the box, opened it curiously and reached inside and revealed an item she have never seen before in her life.
-    The king was terrified when he noticed a sharp point of a spindle in princesses hand. The curse, after all, made it's way to the princess.
-  next: [ look, jump ]
-
-look:
-  clip: I looked at the queen
-  text: |-
-    I looked at the queen. She was the only one that seemed calm and content watching as princess touched the sharp point of the spindle.
-    A small drop of blood showed up on the tip of the Princess's finger. She looked at it surprised and fell, as dead, to her bed fulfilling the evil wish of the witch.
-    And it all happened so fast, that before we could move, a deep sleep fell upon not just a princess, but the king, the queen and everyone in the castle. My eyes closed and I fell to the floor…
-  next: [ down ]
-
-jump:
-  clip: Without hesitation, I jumped forward
-  text: |-
-    Without hesitation, I jumped forward and snatched the spindle from the Princess's hand.
-    “You foolish girl! How dare you interfere with destiny?” The queen was very angry. “Guards! Take her away!” she cried out before I could explain myself. Her voice echoed through the corridors and I heard the loud steps of the guards behind me.
-  gain: spindle
-  next: [ push, surrender, run ]
-
-push:
-  clip: “I am sorry, Princess”
-  text: |-
-    “I am sorry, Princess,” I said as I pushed the sharp point of the spindle against her snow-white hand.
-    A small drop of blood showed up on the tip of the Princess's finger. She looked at it surprised and fell, as dead, to her bed fulfilling the evil wish of the witch.
-    And it all happened so fast, that before we could move, a deep sleep fell upon not just a princess, but the king, the queen and everyone in the castle. My eyes closed and I fell to the floor…
-  need: spindle
-  lose: [ spindle ]
-  next: [ down ]
-
-down:
-  clip: Down, down, down
-  text: |-
-    Down, down, down… Would the fall never come to the end? Either the castle floor was very far, or I fell very slowly, for I had plenty of time to think of what just happened… Was I asleep? Should I wake up?
-    With my eyes closed I was falling down, but I never seemed to reach the stone castle floor.
-  next: [ down2, open2 ]
-
-down2:
-  clip: Down, down, down
-  text: |-
-    Down, down, down… There was nothing else to do, so I started talking to myself. “I wonder how many miles I’ve fallen by this time?” I said out loud and my words echoed around me. “I wonder if I shall fall right through the earth!” Even that it was me saying these words, they felt alien and sounded like spoken by some else.
-  next: [ down, open2 ]
-
-open2:
-  clip: I opened my eyes
-  text: |-
-    I opened my eyes and found myself falling down a very deep well… First, I tried to look down and make out what she was coming to, but it was too dark to see anything; then I looked at the sides of the well, and noticed that they were filled with cupboards and book-shelves. I tried to reach them as I passed, but I was falling too fast.
-  next: [ down, down2, open ]
-
-open:
-  clip: I opened my eyes
-  text: |-
-    I opened my eyes and found myself back in the princesses bedroom, and every one in the castle awoke as well.
-    And the princess was there, lying in her bed and some fancy dressed young man was holding her in his arms. Terrified, she pushed him away. He dropped to his knees and asked her to be his wife. He told us he is a prince from a nearby kingdom and that he has lifted the spell that caused as all to sleep for hundred of years.
-  next: [ proposal ]
-
-proposal:
-  clip: The king accepted his proposal
-  text: |-
-    The king accepted his proposal, promised him half of the kingdom for lifting the curse and the wedding was soon announced.
-    The only one unhappy about the turn of events was the Princess. She told her father and the Prince that, as grateful as she was, she does not want to be his bride.
-    The Prince got angry and threaten to invade the kingdom and take the land and the Princess by force, if she refuses.
-  next: [ locked ]
-
-locked:
-  clip: The king ordered the Princess to be locked
-  text: |-
-    The king ordered the princess to be locked in her rooms, and the wedding preparations continued.
-    “Why at last can’t I make a choice of my own?” princess cried to my shoulder. “Am I destined to be trapped in this life and this castle? Is it still this dreadful curse in the works?”
-    As the time passed and wedding day approached the princess got sadder and sadder. I knew I was the one she trusted the most, and if anyone could help her it was I.
-  next: [ grow, escape, happy ]
-
-grow:
-  clip: “I am sure you will grow to love your prince”
-  text: |-
-    “I am sure you will grow to love your prince. He is destined for you, after all,” I said trying to calm her.
-    “You are just like my father and step-mother,” Princess said bitterly and refused to speak to me again.
-    At the day of the wedding, when I finished lacing her dress, she glanced at herself in the mirror, then looked through the window and said "I just wanted to be free as a bird." She turned around, looked at me with her tearful eyes and run away.
-    The princess rushed upstairs to the top of the castle tower and jumped down into the river. For once, choosing her own destiny.
-
-escape:
-  clip: “I can help you run away, Princess”
-  text: |-
-    “I can help you run away, Princess. Hear my plan!” I said and explaned what she should do when I prepare our escape.
-    One night when the clock struck twelve and the whole castle was sleeping, I sneaked into the Princess's bedroom. She left one candle burning and was lying awake.
-    “It’s the time dear princess, now or never,” I said to her.
-  next: [ hunt, geese ]
-
-happy:
-  clip: I wish for you to live happily ever after
-  text: |-
-    "I wish for you to live happily ever after, Princess." I said, and were it my words or did she just accept that fate, the princess wedded the prince and they soon became the king and the queen of the nearby land.
-    Soon after, the young king soon died in the battle leaving her with a daughter to raise and the kingdom to rule. She lead her people well and just, so she grown to be known far and wide not only for her beauty, but for being fair and clever queen.
+    “I wish I could read this book,” I thought and magically, all the letters appeared back on all the pages.
+    Will I be able to find out what I did wrong? Could this all end differently? So I started reading...
   need: wish
-
-hunt:
-  clip: I pulled out the dagger
-  text: |-
-    I pulled out the dagger and we cut each other hair with it's sharp blade. We then changed to hunting dresses and cloaks, and sneaked out of the castle to the stables.
-    Near the castle was a large, dark forest, so at the dawn, unrecognized under the hoods, we joined hunting expedition into the nearby forest.
-    In the depths of the forest we left the hunters and rode away on our horses. On and on we went traveling to villages and towns living an honest and hard-working lives, free as birds.
-  need: dagger
-
-geese:
-  clip: I took the girl by the hand
-  text: |-
-    I took the girl by the hand and led her down the stairs, through kitchen and out of the castle. Through a hole in the walls we got down to the river bank and guided by the moonshine reflected in the waters we run away as fast as we can.
-    For several days we followed the river by night, hiding in the shadows of the groves we passed by during the daylight.
-    One day we've met a very old woman who was gathering some grass for her geese and wild fruit for herself. We helped her carry the load, so she invited us to stay with her.
-    And for a long time we lived there there with the old woman. Only sometimes at night the princess wept to the pillow missing her royal life and instead of tears little pearls dropped from her crying eyes.
