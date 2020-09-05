@@ -76,8 +76,8 @@ ul {
 }
 
 li { margin-bottom: 0.5em; clear: both; }
-/* TODO: shorted the name? change to data- */
-.locked { opacity: 0.5; cursor: not-allowed; }
+/* locked links to pages */
+.l { opacity: 0.5; cursor: not-allowed; }
 
 li:after {
     float: left;

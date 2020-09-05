@@ -112,17 +112,17 @@ function renderPage(page, isInit) {
       var isAvailable = !nextPage.need || supply.indexOf(nextPage.need) >= 0;
 
       if (isToc && !found[nextPageId]) {
-        return '<li class=locked><span>Page not found</span><span>' + nextPageNo + '</span></li>';
+        return '<li class=l><span>Page not found</span><span>' + nextPageNo + '</span></li>';
       } else if (isAvailable || isToc) {
         return '<li data-next=' + nextPageId +'><span>' + nextPage.clip + '</span><span>' + nextPageNo + '</span></li>';
       } else {
         // tooltip with requirement (~20B)
-        return '<li class=locked title="Requires a ' + nextPage.need + '"><span>' + nextPage.clip + '</span><span>???</span></li>'
+        return '<li class=l title="Requires a ' + nextPage.need + '"><span>' + nextPage.clip + '</span><span>???</span></li>'
       }
     }).join("");
 
     if (isToc) {
-      choicesEl.innerHTML += '<li class=locked><span>Page not found</span><span>404</span></li>';
+      choicesEl.innerHTML += '<li class=l><span>Page not found</span><span>404</span></li>';
     }
   }
 
