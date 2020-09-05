@@ -10,38 +10,38 @@ intro:
 once:
   clip: Once upon a time
   text: |-
-    Once upon a time there was a castle were I served as a nursemaid for the king's daughter. I've been attending to the princess since the day she was born, especially after the disgraceful curse cast upon her by the uncontent and uninvited witch.
-    Even before the curse reached for the princess, it caused a great grief for the queen, leading to her illness and death when princess was just couple years old. On her deathbed, the queen ordered me to raise and protect the princess and so I stand by her, assisting the preparations for her fifteenth birthday.
+    Once upon a time there was a castle were I served as a nursemaid for the King's daughter. I've been attending to the Princess since the day she was born, especially after the disgraceful curse cast upon her by the uncontent and uninvited witch.
+    Even before the curse reached for the Princess, it caused a great grief for the queen, leading to her illness and death when the girl was just couple years old. On her deathbed, the queen ordered me to raise and protect her daughter and so I stand by her, assisting the preparations for her fifteenth birthday.
   next: [ birthday ]
 
 birthday:
   clip: And on her fifteenth birthday
   text: |-
-    And on her fifteenth birthday, the curse said, the princess shall prick her finger and fall down as if dead. But she didn't know about it. Her father protected her from the truth and gave command to burn all spinning wheels in the kingdom.
-    I was just helping her getting dressed for the celebrations when we heard a knock at the door. It was one of the guards to tell me the king wishes to see me. I haven't finished lacing up princesses dress when another servant announced that the queen requested my assistance as well.
+    And on her fifteenth birthday, the curse said, the Princess shall prick her finger and fall down as if dead. But she didn't know about it. Her father protected her from the truth and gave command to burn all spinning wheels in the kingdom.
+    I was just helping her getting dressed for the celebrations when we heard a knock at the door. It was one of the guards to tell me the King wishes to see me. I haven't finished lacing up Princess's dress when another servant announced that the Queen requested my assistance as well.
   next: [ princess, king, queen ]
 
 princess:
-  clip: The princess seemed upset
+  clip: The Princess seemed upset
   text: |-
-    The princess seemed upset. Even not knowing about the curse, she could feel the tension in the castle.
+    The Princess seemed upset. Even not knowing about the curse, she could feel the tension in the castle.
     "I wish I could be as free as these birds," she said when I finished tying up her dress. "My father keeps me locked in this castle, protecting me from the whole world. And the new queen pretending to be a mother to me, talking of nothing but my destined future."
     "Everyone cares for you, Princess," I said to calm her down, "and to-day is very a important day." Her wonderful dress was ready, so I asked to be excused.
   next: [ king, queen ]
 
 king:
-  clip: I walked down to see the king
+  clip: I walked down to see the King
   text: |-
-    I walked down to see the king, and his guard stayed with the princess. Her father would not let her be alone this day.
-    "You've taken great care of my daughter since she was born," the king said when I entered, "but today is the most important day of her life and we cannot be more careful". He tried to sound calm and sure, but I could see the burden of worry on his shoulders. "I know her mother made sure you are well trained to protect the princess, even outside the duties of a nursemaid, so you should know how to handle that." He handed me a beautiful and well-ballanced dagger. "Don't trust anyone and do what it takes to protect my daughter from the curse." he added before I left.
+    I walked down to see the King, and his guard stayed with the Princess. Her father would not let her be alone this day.
+    "You've taken great care of my daughter since she was born," the King said when I entered, "but today is the most important day of her life and we cannot be more careful". He tried to sound calm and sure, but I could see the burden of worry on his shoulders. "I know her mother made sure you are well trained to protect the Princess, even outside the duties of a nursemaid, so you should know how to handle that." He handed me a beautiful and well-ballanced dagger. "Don't trust anyone and do what it takes to protect my daughter from the curse." he added before I left.
   gain: dagger
   next: [ celebrations, queen ]
 
 queen:
   clip: The Queen’s chambers were on the other side
   text: |-
-    The Queen’s chambers were on the other side of a long corridor. They always smelled of smoke and magic, so I didn't like to go there. King married her a few years earlier, in hope of a male descendant, rumours said.
-    When I entered, she was standing by a big mirror on the wall. She turned to me and handed me a small box cut out of an emerald and beautifully engraved. “I want you to take this and put it with the rest of the presents. And keep it a secret, will you? It's a small surprise for our dear princess. The gift of destiny.”
+    The Queen’s chambers were on the other side of a long corridor. They always smelled of smoke and magic, so I didn't like to go there. The King married her a few years earlier, in hope of a male descendant, rumours said.
+    When I entered, she was standing by a big mirror on the wall. She turned to me and handed me a small box cut out of an emerald and beautifully engraved. “I want you to take this and put it with the rest of the presents. And keep it a secret, will you? It's a small surprise for our dear Princess. The gift of destiny.”
   next: [ box ]
   gain: emerald box
 
@@ -49,28 +49,28 @@ box:
   clip: The box was very light
   text: |-
     The box was very light and something rattled inside with every step I made down the stairs to the ball room, where all the birthday presents were gathered.
-    I was a bit suspicious why the queen was so secrative about this. And why she just didn't give it to the princess herself.
+    I was a bit suspicious why the Queen was so secrative about this. And why she just didn't give it to the Princess herself.
   next: [ deliver, peek ]
 
 deliver:
   clip: That was not my place to intervene
   text: |-
     That was not my place to intervene, so I walked down to the ballroom. The servants were kept busy decorating the tables, and musicians were already practicing for the evening. The preparations were in full swing.
-    Discretely I placed the box with the rest of the presents already sent to the princess.
+    Discretely I placed the box with the rest of the presents already sent to the Princess.
   next: [ celebrations ]
   lose: [ emerald box, spindle ]
 
 peek:
   clip: Carefully I opened the box
   text: |-
-    Carefully I opened the box and peeked inside. How surprised I was to find that there was a spindle inside. A spindle! The very item that was supposed to bring the cursed sleep upon our princess. Why would the queen want to give it to her?
+    Carefully I opened the box and peeked inside. How surprised I was to find that there was a spindle inside. A spindle! The very item that was supposed to bring the cursed sleep upon our Princess. Why would the Queen want to give it to her?
   next: [ deliver, warn ]
 
 warn:
-  clip: The king needed to be warned about it
+  clip: The King needed to be warned about it
   text: |-
-    The king needed to be warned about it, so I rushed to his chambers. When I entered, he was talking with his wife. They both looked at me and noticed the spindle in my hand.
-    “You foolish girl! How dare you interfere with destiny?” The queen was very angry, and the king was not less so. “Guards! Take her away!” She cried before I could explain myself. Her voice echoed through the corridors and I heard the loud steps of the guards behind me.
+    The King needed to be warned about it, so I rushed to his chambers. When I entered, he was talking with his wife. They both looked at me and noticed the spindle in my hand.
+    “You foolish girl! How dare you interfere with destiny?” The Queen was very angry, and the King was not less so. “Guards! Take her away!” She cried before I could explain myself. Her voice echoed through the corridors and I heard the loud steps of the guards behind me.
   next: [ surrender, run ]
   gain: spindle
   lose: [ emerald box ]
@@ -78,31 +78,31 @@ warn:
 celebrations:
   clip: The celebrations were about to start
   text: |-
-    The celebrations were about to start, so I retured for the princess and we joined her family and other guests in the throne room.
+    The celebrations were about to start, so I retured for the Princess and we joined her family and other guests in the throne room.
     Everyone praised her beauty and well manners and she seemed to enjoy all the admiration. They ate and drank and were merry all the evening and if not for the worried eyes of her father, you could almost forget about the curse…
-    After the ball has ended we moved all the presents to princesses bedroom where she was joined by her father and the queen to unveil the wonders of the gifts.
+    After the ball has ended we moved all the presents to the Princess's bedroom where she was joined by her father and the Queen to unveil the wonders of the gifts.
   next: [ attention ]
 
 attention:
   clip: The small emerald box was the first one
   text: |-
     The small emerald box was the first one was the first one that caught her attention. Princess picked up the box, opened it curiously and reached inside and revealed an item she have never seen before in her life.
-    The king was terrified when he noticed a sharp point of a spindle in princesses hand. The curse, after all, made it's way to the princess.
+    The King was terrified when he noticed a sharp point of a spindle in his daughter's hand. The curse, after all, made it's way to the Princess.
   next: [ look, jump ]
 
 look:
-  clip: I looked at the queen
+  clip: I looked at the Queen
   text: |-
-    I looked at the queen. She was the only one that seemed calm and content watching as princess touched the sharp point of the spindle.
+    I looked at the Queen. She was the only one that seemed calm and content watching as the Princess touched the sharp point of the spindle.
     A small drop of blood showed up on the tip of the Princess's finger. She looked at it surprised and fell, as dead, to her bed fulfilling the evil wish of the witch.
-    And it all happened so fast, that before we could move, a deep sleep fell upon not just a princess, but the king, the queen and everyone in the castle. My eyes closed and I fell to the floor…
+    And it all happened so fast, that before we could move, a deep sleep fell upon not just the Princess, but the King, the Queen and everyone in the castle. My eyes closed and I fell to the floor…
   next: [ down ]
 
 jump:
   clip: Without hesitation, I jumped forward
   text: |-
     Without hesitation, I jumped forward and snatched the spindle from the Princess's hand.
-    “You foolish girl! How dare you interfere with destiny?” The queen was very angry. “Guards! Take her away!” she cried out before I could explain myself. Her voice echoed through the corridors and I heard the loud steps of the guards behind me.
+    “You foolish girl! How dare you interfere with destiny?” The Queen was very angry. “Guards! Take her away!” she cried out before I could explain myself. Her voice echoed through the corridors and I heard the loud steps of the guards behind me.
   gain: spindle
   next: [ push, surrender, run ]
 
@@ -111,7 +111,7 @@ push:
   text: |-
     “I am sorry, Princess,” I said as I pushed the sharp point of the spindle against her snow-white hand.
     A small drop of blood showed up on the tip of the Princess's finger. She looked at it surprised and fell, as dead, to her bed fulfilling the evil wish of the witch.
-    And it all happened so fast, that before we could move, a deep sleep fell upon not just a princess, but the king, the queen and everyone in the castle. My eyes closed and I fell to the floor…
+    And it all happened so fast, that before we could move, a deep sleep fell upon not just the Princess, but the King, the Queen and everyone in the castle. My eyes closed and I fell to the floor…
   need: spindle
   lose: [ spindle ]
   next: [ down ]
@@ -130,8 +130,8 @@ forest:
   clip: I got into the nearby forest
   text: |-
     I crossed the drawbridge and was running away as fast as I could until I reached the forest nearby.
-    By and by, while I was sneaking deep into the woods, I heard some horses clopping. I hid in the bushes and overheard that the guards were not looking for me, but the princess! She must have run away as well, poor girl!
-    When they were far enough I moved on. I should find the princess, but where could she be?
+    By and by, while I was sneaking deep into the woods, I heard some horses clopping. I hid in the bushes and overheard that the guards were not looking for me, but the Princess! She must have run away as well, poor girl!
+    When they were far enough I moved on. I should find the Princess, but where could she be?
   next: [ trap ]
 
 well:
@@ -214,7 +214,7 @@ trap:
   text: |-
     Passing through a dense thicket, I heard a far-off cry. I forgot how tired I was and hurried forward until I came to a fallen tree.
     Here I saw a dwarf with a long snow-white beard bobbing up and down, for the end of his beard was caught in the tree, and he could not get free.
-    “Can't you help me?” He cried when he saw me. “I need to hurry and warn the princess.”
+    “Can't you help me?” He cried when he saw me. “I need to hurry and warn the Princess.”
   next: [ talk, cut ]
 
 talk:
@@ -228,7 +228,7 @@ talk:
 search:
   clip: He was of no use, so I left him alone
   text: |-
-    He was of no use, so I left him alone and went on, trying to find the Princess myself. I searched and searched, but there was no hut, no oak and no princess in sight. I went on and on, till the sun set and it began to grow dark and all at once, I saw a far-off light twinkling through the trees.
+    He was of no use, so I left him alone and went on, trying to find the Princess myself. I searched and searched, but there was no hut, no oak and no Princess in sight. I went on and on, till the sun set and it began to grow dark and all at once, I saw a far-off light twinkling through the trees.
     Glad, I walked toward the light and came to a meadow with a little cottage under a great oak tree. And in front of the hut, the Princess was talking to some old woman who handed her one of the roses from the basket.
   next: [ rose ]
 
@@ -236,7 +236,7 @@ cut:
   clip: I pulled my dagger and cut off the end of his beard
   text: |-
     I pulled my dagger and cut off the end of his beard. Although this set him free the dwarf was very angry.
-    “How dare you ruin my beautiful beard?” he cried and snatched the dagger from my hand. Away he went without telling me anything about the princess.
+    “How dare you ruin my beautiful beard?” he cried and snatched the dagger from my hand. Away he went without telling me anything about the Princess.
   next: [ follow ]
   need: dagger
   lose: [ dagger ]
@@ -254,22 +254,22 @@ tree:
 follow:
   clip: Without hesitation, I hurried after
   text: |-
-    Without hesitation, I hurried after, fearing that I would lose him from sight and never find the princess. Off I went following the steps of the surprisingly swift dwarf through the woods, meadows and thickets.
+    Without hesitation, I hurried after, fearing that I would lose him from sight and never find the Princess. Off I went following the steps of the surprisingly swift dwarf through the woods, meadows and thickets.
     It felt like I'm chasing him for miles until I finally got to a clearing and saw a cottage standing under a great oak tree.
   next: [ hut ]
 
 hut:
-  clip: And there was the princess
+  clip: And there was the Princess
   text: |-
-    And there was the princess, sitting on a bench in front of the cottage. She looked tired but happy as she spoke with other dwarfs gathering around her. When they heard my steps, they all turned their heads at me. Princess was overjoyed to see me, and we rushed into each other's arms.
+    And there was the Princess, sitting on a bench in front of the cottage. She looked tired but happy as she spoke with other dwarfs gathering around her. When they heard my steps, they all turned their heads at me. The Princess was overjoyed to see me, and we rushed into each other's arms.
     She told me how she overheard the commotion when the guards were trying to capture me and took a chance to run away from her father, step-mother and her cursed birthday. We decided to have a rest at the dwarfs home and move on next morning.
     Tired and overwhelmed by the events of the day I had a nap in the moss under the oak tree. I slept awhile until some voices woke me up when the sun was about to set.
   next: [ woman ]
 
 woman:
-  clip: The princess was talking to some old woman
+  clip: The Princess was talking to some old woman
   text: |-
-    The princess was talking to some old woman at the front of the cottage. The woman was wearing a long dark tunic and a headscarf. In her hand, she was holding a basket full of fresh cut roses.
+    The Princess was talking to some old woman at the front of the cottage. The woman was wearing a long dark tunic and a headscarf. In her hand, she was holding a basket full of fresh cut roses.
     Still not fully awake, I started to feel suspicious, but didn’t yet know why.
   next: [ rose, familiar ]
 
@@ -299,10 +299,10 @@ witch:
   next: [ court ]
 
 funeral:
-  clip: Princess was lying still and lifeless
+  clip: The Princess was lying still and lifeless
   text: |-
-    Princess was lying still and lifeless with the rose in her hand. The dwarfs came outside awakened by the commotion and we did our best to bring her around, but it was no use. I wept and wept all night.
-    Next day we laid her on a bed of flower petals, with a fatal rose in her hands, and put her in a crystal coffin prepared by hard-working dwarfs. It was my duty to bring her back to the king, so we carried her to the castle.
+    The Princess was lying still and lifeless with the rose in her hand. The dwarfs came outside awakened by the commotion and we did our best to bring her around, but it was no use. I wept and wept all night.
+    Next day we laid her on a bed of flower petals, with a fatal rose in her hands, and put her in a crystal coffin prepared by hard-working dwarfs. It was my duty to bring her back to the King, so we carried her to the castle.
   next: [ prince ]
 
 prince:
@@ -316,7 +316,7 @@ kiss:
   clip: The Prince stepped back pushed away by the Princess
   text: |-
     The Prince stepped back pushed away by the Princess who was sitting there terrified in her crystal coffin. The Prince dropped to his knees, announced his love for the Princess, and asked her to be his wife.
-    The Princess was too frail and too scared to answer, so we all headed to the castle. The king was overjoyed to see his daughter, and even the Queen seemed content when we told the story of the Prince and the spell-lifting kiss.
+    The Princess was too frail and too scared to answer, so we all headed to the castle. The King was overjoyed to see his daughter, and even the Queen seemed content when we told the story of the Prince and the spell-lifting kiss.
   next: [ proposal ]
 
 frog:
@@ -324,7 +324,7 @@ frog:
   text: |-
     “I wish you would regret that kiss that you forced on unwilling lips,” I said. The Prince stepped back. I thought his eyes got big of fear, but it was his head that started to grow bigger and wider, and his skin started turning green. “Only when someone falls in love with you, you shall turn back into human form. And if the last petal falls of this rose before you find love, you shall never be human again.”
     The Prince turned into a frog-like beast and ran away with the cursed rose, never to be seen in our kingdom again.
-    When I stepped to check on the Princess, I noticed her lying with her eyes open. Was it the power of my wish, or the prince's kiss that lifted the spell, we will never know.
+    When I stepped to check on the Princess, I noticed her lying with her eyes open. Was it the power of my wish, or the Prince's kiss that lifted the spell, we will never know.
     We returned to the castle and lived there happily. But from time to time we would run away and visit the forest in search of the dwarfs and their little hut.
   need: wish
 
@@ -352,40 +352,40 @@ open2:
 open:
   clip: I opened my eyes
   text: |-
-    I opened my eyes and found myself back in the princesses bedroom, and every one in the castle awoke as well.
-    And the princess was there, lying in her bed and some fancy dressed young man was holding her in his arms. Terrified, she pushed him away. He dropped to his knees and asked her to be his wife. He told us he is a prince from a nearby kingdom and that he has lifted the spell that caused as all to sleep for hundred of years.
+    I opened my eyes and found myself back in the Princess's bedroom, and every one in the castle awoke as well.
+    And the Princess was there, lying in her bed and some fancy dressed young man was holding her in his arms. Terrified, she pushed him away. He dropped to his knees and asked her to be his wife. He told us he is a prince from a nearby kingdom and that he has lifted the spell that caused as all to sleep for hundred of years.
   next: [ proposal ]
 
 proposal:
-  clip: The king accepted his proposal
+  clip: The King accepted his proposal
   text: |-
-    The king accepted his proposal, promised him half of the kingdom for lifting the curse and the wedding was soon announced.
+    The King accepted his proposal, promised him half of the kingdom for lifting the curse and the wedding was soon announced.
     The only one unhappy about the turn of events was the Princess. She told her father and the Prince that, as grateful as she was, she does not want to be his bride.
     The Prince got angry and threaten to invade the kingdom and take the land and the Princess by force, if she refuses.
   next: [ locked ]
 
 locked:
-  clip: The king ordered the Princess to be locked
+  clip: The King ordered the Princess to be locked
   text: |-
-    The king ordered the princess to be locked in her rooms, and the wedding preparations continued.
-    “Why at last can’t I make a choice of my own?” princess cried to my shoulder. “Am I destined to be trapped in this life and this castle? Is it still this dreadful curse in the works?”
-    As the time passed and wedding day approached the princess got sadder and sadder. I knew I was the one she trusted the most, and if anyone could help her it was I.
+    The King ordered the Princess to be locked in her rooms, and the wedding preparations continued.
+    “Why at last can’t I make a choice of my own?” she cried to my shoulder. “Am I destined to be trapped in this life and this castle? Is it still this dreadful curse in the works?”
+    As the time passed and wedding day approached the Princess got sadder and sadder. I knew I was the one she trusted the most, and if anyone could help her it was I.
   next: [ grow, escape, happy ]
 
 grow:
   clip: “I am sure you will grow to love your prince”
   text: |-
     “I am sure you will grow to love your prince. He is destined for you, after all,” I said trying to calm her.
-    “You are just like my father and step-mother,” Princess said bitterly and refused to speak to me again.
+    “You are just like my father and step-mother,” the Princess said bitterly and refused to speak to me again.
     At the day of the wedding, when I finished lacing her dress, she glanced at herself in the mirror, then looked through the window and said "I just wanted to be free as a bird." She turned around, looked at me with her tearful eyes and run away.
-    The princess rushed upstairs to the top of the castle tower and jumped down into the river. For once, choosing her own destiny.
+    The Princess rushed upstairs to the top of the castle tower and jumped down into the river. For once, choosing her own destiny.
 
 escape:
   clip: “I can help you run away, Princess”
   text: |-
     “I can help you run away, Princess. Hear my plan!” I said and explaned what she should do when I prepare our escape.
     One night when the clock struck twelve and the whole castle was sleeping, I sneaked into the Princess's bedroom. She left one candle burning and was lying awake.
-    “It’s the time dear princess, now or never,” I said to her.
+    “It’s the time dear Princess, now or never,” I said to her.
   next: [ geese, hunt ]
 
 geese:
@@ -407,8 +407,8 @@ hunt:
 happy:
   clip: I wish for you to live happily ever after
   text: |-
-    "I wish for you to live happily ever after, Princess." I said, and were it my words or did she just accept that fate, the princess wedded the prince and they soon became the king and the queen of the nearby land.
-    Soon after, the young king soon died in the battle leaving her with a daughter to raise and the kingdom to rule. She lead her people well and just, so she grown to be known far and wide not only for her beauty, but for being fair and clever queen.
+    "I wish for you to live happily ever after, Princess." I said, and were it my words, or did she just accept that fate, the Princess wedded the Prince and they soon became the king and the queen of the nearby land.
+    Soon after, the young king died in the battle leaving her with a daughter to raise and the kingdom to rule. She lead her people well and just, so she grown to be known far and wide not only for her beauty, but for being fair and clever queen.
   need: wish
 
 # CHAPTER WITH DEFIED DESTINY
@@ -417,7 +417,7 @@ court:
   clip: When I opened them I was in the very middle of the court
   text: |-
     When I opened them I was in the very middle of the court. The Queen, as the judge, was seated on her throne and a great crowd assembled around us—all sorts of little birds and beasts.
-    I was being accused of stealing the queen's roses which led to unfulfilled destiny. I wanted to speak up and defend myself when I felt a very curious sensation: I was beginning to grow larger and larger. When I tried to move I tipped over the jury-box with the edge of my skirt, upsetting all the jurymen on to the heads of the crowd below.
+    I was being accused of stealing the Queen's roses which led to unfulfilled destiny. I wanted to speak up and defend myself when I felt a very curious sensation: I was beginning to grow larger and larger. When I tried to move I tipped over the jury-box with the edge of my skirt, upsetting all the jurymen on to the heads of the crowd below.
     “Off with her head!” the Queen shouted at the top of her voice and the clock started striking twelve.
   next: [ feather ]
 
