@@ -3,7 +3,7 @@
 * { box-sizing: border-box }
 
 body {
-    font: 16px/1.5 Goudy Old Style,Garamond,Times New Roman,serif;
+    font: 18px/1.5 Goudy Old Style,Garamond,Times New Roman,serif;
     background: #841;
     margin: 0;
 }
@@ -88,9 +88,9 @@ li span { pointer-events: none; }
     margin-top: 1em;
 }
 
-@media (min-width: 40em) {
+@media (min-width: 35em) {
     body {
-        font-size: 20px;
+        font-size: 22px;
         background-color: #111;
     }
 
@@ -98,7 +98,7 @@ li span { pointer-events: none; }
     #c {
         background-color: #841;
         padding: 1em 1em 1em 0;
-        max-width: 40em;
+        max-width: 35em;
     }
 
     #c:after {
@@ -113,7 +113,7 @@ li span { pointer-events: none; }
     }
 
     #p {
-        padding:  2em 4em 2em 5em;
+        padding:  2em 3em 2em 4em;
         min-height: calc(100vh - 2em);
     }
 
@@ -141,7 +141,7 @@ li span { pointer-events: none; }
     /* cover */
     #c {
         padding: 1em;
-        max-width: 80em;
+        max-width: 68em;
         margin: 0 auto;
     }
 
@@ -150,7 +150,7 @@ li span { pointer-events: none; }
     }
 
     #p {
-        padding-left: calc(50% + 2em);
+        padding-left: calc(50% + 3em);
         min-height: calc(100vh - 4em);
     }
 }
