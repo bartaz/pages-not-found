@@ -6,7 +6,7 @@
   "scripts": {
     "build": "./build.sh",
     "watch": "onchange 'src/*' -i -- npm run build",
-    "zip": "npm run build && rm -f book.zip && zip -X book.zip index.html"
+    "zip": "npm run build && rm -f book.zip && zip -X -9 book.zip index.html"
   },
   "keywords": [
     "js13kgames"
