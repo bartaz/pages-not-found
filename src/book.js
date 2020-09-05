@@ -7,12 +7,13 @@ var pageEl = document.querySelector("b");
 
 // GAME DATA
 function readGameData() {
+  var data;
   try {
-    return JSON.parse(localStorage.getItem('THE_BOOK_OF_PAGES_NOT_FOUND_DATA'));
+    data = JSON.parse(localStorage.getItem('THE_BOOK_OF_PAGES_NOT_FOUND_DATA'));
   } catch(e) {
     // ignore and return default
   }
-  return { found: {}, current: 'intro', supply: [] };
+  return data || { found: {}, current: 'intro', supply: [] };
 }
 
 function saveGameData(data) {
@@ -60,33 +61,31 @@ function renderPage(page, isInit) {
     textEl.innerHTML = "";
   }
 
-  if (page.next) {
-    choicesEl.innerHTML = page.next.map(function(nextPageId) {
-      var nextPage = pages[nextPageId];
-      var nextPageNo = Object.keys(pages).indexOf(nextPageId);
-      var isAvailable = !nextPage.need || supply.indexOf(nextPage.need) >= 0;
-
-      if (isToc && !found[nextPageId]) {
-        return '<li class=locked><span>Page not found</span><span>' + nextPageNo + '</span></li>';
-      } else if (isAvailable || isToc) {
-        return '<li data-next=' + nextPageId +'><span>' + nextPage.clip + '</span><span>' + nextPageNo + '</span></li>';
-      } else {
-        return '<li class=locked title="Requires a ' + nextPage.need + '"><span>' + nextPage.clip + '</span><span>???</span></li>'
-      }
-    }).join("");
-  } else {
-    choicesEl.innerHTML = "";
-  }
 
   if (page.gain && !isInit) {
-    // TODO: to replace crossed item when gaining it again ~20B
-    // var index = supply.indexOf('<s>' + item + '</s>');
-    // if (index) {
-    //   supply[index] = item;
-    // } else {
-      supply.push(page.gain)
-    // }
+    // supply = supply.concat(page.gain)
+    //
+    // gain items in a way that makes sure you don't get duplicates when starting again
+    // adds ~65B
+    var startIndex = 0;
+    var index;
+    [].concat(page.gain).forEach(function(item) {
+      index = supply.indexOf('<s>' + item + '</s>', startIndex);
+      if (index > -1) {
+        supply[index] = item;
+        startIndex = index + 1;
+      } else {
+        index = supply.indexOf(item, startIndex);
+        if (index > -1) {
+          startIndex = index + 1;
+        } else {
+          supply.push(item);
+          startIndex = supply.length + 1;
+        }
+      }
+    });
   }
+
   if (page.lose) {
     page.lose.forEach(function(item) {
       var index = supply.indexOf(item);
@@ -99,10 +98,42 @@ function renderPage(page, isInit) {
     supply = [];
   }
 
+  if (page.next) {
+    choicesEl.innerHTML = page.next.map(function(nextPageId) {
+      var nextPage = pages[nextPageId];
+      var nextPageNo = Object.keys(pages).indexOf(nextPageId);
+      var isAvailable = !nextPage.need || supply.indexOf(nextPage.need) >= 0;
+
+      if (isToc && !found[nextPageId]) {
+        return '<li class=locked><span>Page not found</span><span>' + nextPageNo + '</span></li>';
+      } else if (isAvailable || isToc) {
+        return '<li data-next=' + nextPageId +'><span>' + nextPage.clip + '</span><span>' + nextPageNo + '</span></li>';
+      } else {
+        // tooltip with requirement (~20B)
+        return '<li class=locked title="Requires a ' + nextPage.need + '"><span>' + nextPage.clip + '</span><span>???</span></li>'
+      }
+    }).join("");
+
+    if (isToc) {
+      choicesEl.innerHTML += '<li class=locked><span>Page not found</span><span>404</span></li>';
+    }
+  } else {
+    choicesEl.innerHTML = '';
+  }
+
+
+
   if (supply.length) {
     supplyEl.innerHTML = supply.map(function(item){ return "<span>" + item + "</span>" }).join("");
   } else {
     supplyEl.innerHTML = "";
+  }
+
+  // when the book is unlocked, find all pages
+  if (current === 'book') {
+    Object.keys(pages).forEach(function(page) {
+      found[page] = 1;
+    })
   }
 
   saveGameData({ current: current, supply: supply, found: found });
