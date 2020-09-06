@@ -117,13 +117,15 @@ function renderPage(page, isInit) {
         return '<li data-next=' + nextPageId +'><span>' + nextPage.clip + '</span><span>' + nextPageNo + '</span></li>';
       } else {
         // tooltip with requirement (~20B)
-        return '<li class=l title="Requires a ' + nextPage.need + '"><span>' + nextPage.clip + '</span><span>???</span></li>'
+        // title="Requires a ' + nextPage.need + '"
+        return '<li class=l><span>' + nextPage.clip + '</span><span>' + nextPageNo + '</span></li>'
       }
     }).join("");
 
-    if (isToc) {
-      choicesEl.innerHTML += '<li class=l><span>Page not found</span><span>404</span></li>';
-    }
+    // 404 easter egg ~20B
+    // if (isToc) {
+    //   choicesEl.innerHTML += '<li class=l><span>Page not found</span><span>404</span></li>';
+    // }
   }
 
   if (supply.length) {

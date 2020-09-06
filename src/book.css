@@ -10,31 +10,31 @@ body {
 
 /* page */
 #p {
+    text-align: justify;
     background: #fffff1;
     /* color: #000; */
     padding: 1em;
     position: relative;
     min-height: 100vh;
-    text-align: justify;
 }
 
-/* TODO: move header to bottom of the page on small screens? */
 #h {
-    display: none; /* hide on small screens */
-
+    text-align: center;
+    display: flex;
+    margin-bottom: 2em;
     justify-content: space-between;
     font-variant-caps: small-caps;
     font-size: 16px;
 }
 
-/* show header on intro page, to display the title */
-.intro #h { display: flex }
-.intro #h span {
-    font-size: 3em;
+/* on intro page display the title */
+.intro #h {
+    font-size: 2em;
     font-weight: bold;
-    text-align: center;
-    line-height: 1.1;
-    margin-bottom: 1em;
+    line-height: 1;
+}
+
+.intro #h span {
     max-width: 7.5em;
 }
 
@@ -50,34 +50,31 @@ p:first-of-type {
 p:first-of-type:first-letter {
     float: left;
     font-weight: bold;
-    font-size: 3.5em;
+    font-size: 3.4em;
     line-height: 0.65;
-    padding: 0.1em 0.05em 0 0;
+    padding: 0.13em 0.1em 0 0;
 }
 
 .q { position: relative; }
 .q:before {
-    content: '“';
     position: absolute;
+    content: '“';
     left: -0.5em;
 }
 
 /* dot leaders based on https://www.w3.org/Style/Examples/007/leaders.en.html */
-
-hr {
-    margin: 2em;
-}
-
 ul {
-    padding: 0;
-    margin: 0;
+    padding: 2em 0 0 0;
+    border-top: 1px solid;
+    margin: 2em 0 0 0;
     /* list-style: none; */
     overflow: hidden;
 }
 
 li { margin-bottom: 0.5em; clear: both; }
 /* locked links to pages */
-.l { opacity: 0.5; cursor: not-allowed; }
+.l { color: #888; cursor: not-allowed; }
+/* ~10B .toc li { margin-bottom: 0 } */
 
 li:after {
     float: left;
@@ -90,14 +87,17 @@ li :first-child {
     background: #fffff1;
 }
 li :last-child {
+    position: relative;
     float: right;
     padding-left: 0.3em;
     background: #fffff1;
-    position: relative;
     /* z-index: 1; */
 }
 
-[data-next]:hover { text-decoration: underline; cursor: pointer; }
+[data-next]:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
 li span { pointer-events: none; }
 
 
@@ -106,7 +106,7 @@ li span { pointer-events: none; }
     display: inline-block;
     font-family: cursive;
     transform: rotate(-10deg);
-    margin-right: 1em;
+    margin-right: 0.7em;
     margin-top: 1em;
 }
 
@@ -124,24 +124,19 @@ li span { pointer-events: none; }
     }
 
     #c:after {
+        position: fixed;
         background: linear-gradient(to right, rgba(0,0,0,0) 0%,rgba(0,0,0,0.2) 48%,rgba(0,0,0,0.5) 49%,rgba(0,0,0,0.6) 50%,rgba(0,0,0,0.5) 51%,rgba(0,0,0,0.2) 52%,rgba(0,0,0,0) 100%);
         bottom: 0;
         content: '';
         left: 1em;
-        position: fixed;
         top: 0;
-        transform: translate(-50%,0);
         width: 4em;
+        transform: translate(-50%,0);
     }
 
     #p {
-        padding:  2em 3em 2em 4em;
+        padding:  2em 4em 2em 5em;
         min-height: calc(100vh - 2em);
-    }
-
-    #h {
-        display: flex;
-        margin-bottom: 1em;
     }
 
     #s {
