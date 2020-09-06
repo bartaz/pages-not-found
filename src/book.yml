@@ -327,6 +327,7 @@ frog:
     When I stepped to check on the Princess, I noticed her lying with her eyes open. Was it the power of my wish, or the Prince’s kiss that lifted the spell, we will never know.
     We returned to the castle and lived there happily. But from time to time we would run away and visit the forest in search of the dwarfs and their little hut.
   need: wish
+  lose: [ wish ]
 
 # CHAPTER IN THE SLEEP
 
@@ -403,6 +404,7 @@ hunt:
     Near the castle was a large, dark forest, so at the dawn, unrecognized under the hoods, we joined hunting expedition into the nearby forest.
     In the depths of the forest, we left the hunters and rode away on our horses. On and on we went travelling to villages and towns living honest and hard-working life, free as birds.
   need: dagger
+  lose: [ dagger ]
 
 happy:
   clip: “I wish for you to live happily ever after”
@@ -410,6 +412,7 @@ happy:
     “I wish for you to live happily ever after, Princess,” I said, and were it my words, or did she just accept that fate, the Princess wedded the Prince, and they soon became the king and the queen of the nearby land.
     Soon after, the young king died in the battle leaving her with daughter to raise and the kingdom to rule. She led her people well and just, so she grew to be known far and wide not only for her beauty but for being fair and clever queen.
   need: wish
+  lose: [ wish ]
 
 # CHAPTER WITH DEFIED DESTINY
 
@@ -497,3 +500,4 @@ book:
     “I wish I could read this book,” I thought and magically, all the letters appeared back on all the pages.
     Will I be able to find out what I did wrong? Could this all end differently? So I started reading…
   need: wish
+  lose: [ wish ]

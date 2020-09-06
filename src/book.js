@@ -45,6 +45,7 @@ function renderPage(page, isInit) {
     page = {
       next: Object.keys(pages)
     }
+    supply = [];
   } else {
     page = pages[page];
   }
@@ -91,16 +92,13 @@ function renderPage(page, isInit) {
     });
   }
 
-  if (page.lose) {
+  if (page.lose && !isInit) {
     page.lose.forEach(function(item) {
       var index = supply.indexOf(item);
       if (index > -1) {
         supply[index] = '<s>' + item + '</s>'
       }
     })
-  }
-  if (theEnd) {
-    supply = [];
   }
 
   if (theEnd) {
