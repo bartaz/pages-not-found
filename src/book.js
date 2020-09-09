@@ -158,11 +158,11 @@ function gotoPage(page, isInit) {
       }
     }).join("");
 
-    // Had an idea for little easter egg with 404 page not found in the table of contents
-    // but it could be a bit confusing and was taking precious ~20B
-    // if (isToc) {
-    //   choicesEl.innerHTML += '<li class=l><span>Page not found</span><span>404</span></li>';
-    // }
+    // I could probably use these 21B for something else, but it got me exactly to 13312 bytes,
+    // so I decided it's a sign that I should include this little easter egg in the game ;)
+    if (isToc) {
+      choicesEl.innerHTML += '<li class=l><span>Page not found</span><span>404</span></li>';
+    }
   }
 
   // render supply list (if it contains any items)
