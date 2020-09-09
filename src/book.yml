@@ -12,9 +12,9 @@ once:
   text: |-
     Once upon a time, there was a castle where I served as a nursemaid for the King’s daughter. I’ve been attending to the Princess since the day she was born, especially after the disgraceful curse cast upon her by the uncontent and uninvited witch.
     Even before the curse reached for the Princess, it caused great grief for the queen, leading to her illness and death when the girl was just a couple of years old. On her deathbed, the queen ordered me to raise and protect her daughter, and so I stand by her, assisting the preparations for her fifteenth birthday.
-  next: [ birthday ]
+  next: [ day ]
 
-birthday:
+day:
   clip: And on her fifteenth birthday
   text: |-
     And on her fifteenth birthday, the curse said, the Princess shall prick her finger and fall down as if dead. But she didn’t know about it. Her father protected her from the truth and gave a command to burn all spinning wheels in the kingdom.
@@ -35,7 +35,7 @@ king:
     I walked down to see the King, and his guard stayed with the Princess. Her father would not let her be alone this day.
     “You’ve taken great care of my daughter since she was born,” the King said when I entered, “but today is the most important day of her life, and we cannot be more careful.” He tried to sound calm and sure, but I could see the burden of worry on his shoulders. “I know her mother made sure you are trained well to protect the Princess, even outside the duties of a nursemaid, so you should know how to handle that.” He handed me a beautiful and well-balanced dagger. “Don’t trust anyone and do what it takes to protect my daughter from the curse,” he added before I left.
   gain: dagger
-  next: [ celebrations, queen ]
+  next: [ ball, queen ]
 
 queen:
   clip: The Queen’s chambers were on the other side
@@ -57,7 +57,7 @@ deliver:
   text: |-
     That was not my place to intervene, so I walked down to the ballroom. The servants were kept busy decorating the tables, and musicians were already practising for the evening. The preparations were in full swing.
     Discretely I placed the box with the rest of the presents.
-  next: [ celebrations ]
+  next: [ ball ]
   lose: [ box, spindle ]
 
 peek:
@@ -71,19 +71,19 @@ warn:
   text: |-
     The King needed to be warned about it, so I rushed to his chambers. When I entered, he was talking with his wife. They both looked at me and noticed the spindle in my hand.
     “You foolish girl! How dare you interfere with destiny?” The Queen was very angry, and the King was not less so. “Guards! Take her away!” she cried out before I could explain myself. Her voice echoed through the corridors and I heard the loud steps of the guards behind me.
-  next: [ surrender, run ]
+  next: [ seized, run ]
   gain: spindle
   lose: [ box ]
 
-celebrations:
+ball:
   clip: The celebrations were about to start
   text: |-
     The celebrations were about to start, so I returned for the Princess, and we joined her family and other guests in the throne room.
     Everyone praised her beauty and well manners, and she seemed to enjoy all the admiration. They ate and drank and were merry all the evening and if not for the worried eyes of her father, you could almost forget about the curse…
     After the ball has ended we moved all the presents to the Princess’s bedroom where she was joined by her father and the Queen to unveil the wonders of the gifts.
-  next: [ attention ]
+  next: [ gift ]
 
-attention:
+gift:
   clip: The small emerald box was the first one
   text: |-
     The small emerald box was the first one that caught her attention. Princess picked up the box, opened it curiously, reached inside and revealed an item she has never seen before in her life.
@@ -104,7 +104,7 @@ jump:
     Without hesitation, I jumped forward and snatched the spindle from the Princess’s hand.
     “You foolish girl! How dare you interfere with destiny?” The Queen was very angry. “Guards! Take her away!” she cried out before I could explain myself. Her voice echoed through the corridors and I heard the loud steps of the guards behind me.
   gain: spindle
-  next: [ push, surrender, run ]
+  next: [ push, seized, run ]
 
 push:
   clip: “I am sorry, Princess”
@@ -139,17 +139,17 @@ well:
   text: |-
     Tempted by the shade and a cover the well could provide, I sneaked behind it. I was thirsty, but the pail was dry empty.
     I peeked into the well to see if I can reach the water and the spindle that I was still holding in my hand, slipped from my fingers. It fell to the bottom of the spring and was lost to sight. Trying to lower the pail down the well, I leaned too far and in I fell.
-  next: [ meadow ]
+  next: [ fall ]
   need: spindle
   lose: [ spindle ]
 
-meadow:
+fall:
   clip: But instead of staying in the water
   text: |-
     But instead of staying in the water, I fell on through the spring and came out on the other side. I found myself in a beautiful meadow. The sun was shining bright and there were thousands of flowers in blossom.
     There was a little path across the meadow, and this I followed. It led after a while to a small cottage. In the door stood an old, fierce-looking woman.
     “Oh, it’s you, dear child,” she greeted me as if she knew me. “Come here and live with me. Do your duty and you will meet with my kindness.”
-  next: [ stream, wishes ]
+  next: [ stream, obey ]
 
 stream:
   clip: “I have no wish to obey you”
@@ -165,9 +165,9 @@ moat:
     The water was dirty and smelly. It was a hassle to swim, but finally, I crawled out to the bank on the other side.
     I was all wet and covered in mud and dirt. I laid down to have a rest and, to my surprise, I noticed a drawbridge above me! I was lying by the castle moat!
     Two guards up on the bridge noticed me and rushed down towards me.
-  next: [ surrender ]
+  next: [ seized ]
 
-wishes:
+obey:
   clip: And so I went to live with her
   text: |-
     And so I went to live with her. Days were passing by, but it felt like there was no time at all at this place. Every day I shook the beds until the feathers flew like snowflakes, I took the bread out of the over and picked the apples from the trees.
@@ -190,16 +190,16 @@ again:
   text: |-
     “I wish I did things differently,” I said. The old woman looked at me, opened the door to the cottage and invited me in. But on the other side, there was the Princess’s bedroom! I stepped in, just as I did in the morning of the Princess’s fifteenth birthday.
   lose: [ wish ]
-  next: [ birthday ]
+  next: [ day ]
 
-surrender:
+seized:
   clip: The guards seized me
   text: |-
       The guards seized me, and I was thrown into the dungeon. Long hours seemed to pass by as I was sitting on a cold stone floor, thinking about the Princess, hoping she is well and safe.
-  next: [ release ]
+  next: [ free ]
   lose: [ dagger , spindle ]
 
-release:
+free:
   clip: I heard some steps approaching
   text: |-
     I heard some steps approaching and the cell doors opened. It was the King.
