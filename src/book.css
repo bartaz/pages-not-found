@@ -1,23 +1,32 @@
-/* book styles inspired by Book Layout by Erin E. Sullivan https://codepen.io/erinesullivan/pen/gxdbzp */
-
 * { box-sizing: border-box }
+
+/*
+    The book styles are inspired by Book Layout by Erin E. Sullivan https://codepen.io/erinesullivan/pen/gxdbzp
+    I simplified them a lot to reduce the size and provide a bit different responsive behaviour.
+*/
 
 body {
     font: 18px/1.5 Goudy Old Style,Garamond,Times New Roman,serif;
-    background: #841;
+    background: #841; /* cover color that would appear if you scroll 'outside' the screen */
     margin: 0;
 }
+
+/*
+    To reduce the size of CSS all selectors are manually mangled to single letter classes/ids.
+    If element is unique on the page #id is used, because id= is shorted than class= in HTML ;)
+*/
 
 /* page */
 #p {
     text-align: justify;
     background: #fffff1;
-    /* color: #000; */
+    /* color: #000; let's assume black as default to reduce the size a bit */
     padding: 1em;
     position: relative;
-    min-height: 100vh;
+    min-height: 100vh; /* make sure the page covers whole height of the screen (assuming mobile first) */
 }
 
+/* header - displays book title and page number on top of the page */
 #h {
     text-align: center;
     display: flex;
@@ -27,7 +36,7 @@ body {
     font-size: 16px;
 }
 
-/* on intro page display the title */
+/* on the intro page the title is displayed in large font as book title */
 .intro #h {
     font-size: 2em;
     font-weight: bold;
@@ -35,14 +44,16 @@ body {
 }
 
 .intro #h span {
-    max-width: 7.5em;
+    max-width: 7.5em; /* trying to make it so it wraps nicer, unfortunately Firefox/Chrome seem to differ in how they render the text there */
 }
 
+/* book-style paragraphs: indented, with no margins */
 p {
     text-indent: 2em;
     margin: 0;
 }
 
+/* drop caps for first letter of the page */
 p:first-of-type {
     text-indent: 0;
 }
@@ -55,14 +66,26 @@ p:first-of-type:first-letter {
     padding: 0.13em 0.1em 0 0;
 }
 
-.q { position: relative; }
+/*
+    :first-letter matches together with quote symbols, so for example "T would end up as large drop cap
+    We fix that by removing quote from the beginning and adding it back with CSS here.
+*/
+.q {
+    position: relative;
+}
+
 .q:before {
     position: absolute;
     content: '“';
     left: -0.5em;
 }
 
-/* dot leaders based on https://www.w3.org/Style/Examples/007/leaders.en.html */
+/*
+    Table of contents pages list.
+    Dot leaders based on https://www.w3.org/Style/Examples/007/leaders.en.html
+
+    Targeting all ul/li elements to avoid adding unecessary class names.
+*/
 ul {
     padding: 2em 0 0 0;
     border-top: 1px solid;
@@ -91,17 +114,32 @@ li :last-child {
     float: right;
     padding-left: 0.3em;
     background: #fffff1;
-    /* z-index: 1; */
+    /* z-index: 1; doesn't seem to be needed */
 }
 
+/* hover styles for clickable links, again, haven't used <a> for them to reduce file size */
 [data-next]:hover {
     text-decoration: underline;
     cursor: pointer;
 }
-li span { pointer-events: none; }
+
+/*
+    click event handler is attached to li[data-next],
+    so to prevent any child spans to be targets (and avoid coding event delegation in JS),
+    I just disable pointer events on them
+*/
+li span {
+    pointer-events: none;
+}
 
 
-/* supply */
+/*
+    supply list
+    technically it could/should be a ul/li list, but we already use that for table of content pages, so just hacked that with spans
+
+    It's meant to look like it was handwritten on a book margin,
+    but we don't have space for than on small screens, so we just put them below page text.
+*/
 #s span {
     display: inline-block;
     font-family: cursive;
@@ -110,19 +148,22 @@ li span { pointer-events: none; }
     margin-top: 1em;
 }
 
+/* if the screen is wide enough to fit the whole page and the cover we start to reveal the book */
 @media (min-width: 35em) {
+    /* body is now going to represent a table, not a cover */
     body {
         font-size: 22px;
         background-color: #111;
     }
 
-    /* cover */
+    /* cover - we just show the right side of open page, so cover is visible around top-right-bottom */
     #c {
         background-color: #841;
         padding: 1em 1em 1em 0;
         max-width: 35em;
     }
 
+    /* gradient imitiating the pages folded in the center of the opened book (while this 'center' is on the left side of the page) */
     #c:after {
         position: fixed;
         background: linear-gradient(to right, rgba(0,0,0,0) 0%,rgba(0,0,0,0.2) 48%,rgba(0,0,0,0.5) 49%,rgba(0,0,0,0.6) 50%,rgba(0,0,0,0.5) 51%,rgba(0,0,0,0.2) 52%,rgba(0,0,0,0) 100%);
@@ -134,11 +175,17 @@ li span { pointer-events: none; }
         transform: translate(-50%,0);
     }
 
+    /*
+        page gets larger margins (technically paddings) and the height is reduced to make the cover visible
+    */
     #p {
         padding:  2em 4em 2em 5em;
         min-height: calc(100vh - 2em);
     }
 
+    /*
+        supply list is now written on a right book margin, relying on the book content to not make the names too long
+    */
     #s {
         position: absolute;
         right: 0;
@@ -149,20 +196,23 @@ li span { pointer-events: none; }
     }
 }
 
-/* large screen styles ~50B */
+/* on the largest screen (that can fit to pages side by side) we render the whole book */
 @media (min-width: 80em) {
     body { margin: 1em }
-    /* cover */
+
+    /* cover is now around whole book, centered on the screen */
     #c {
         padding: 1em;
         max-width: 68em;
         margin: 0 auto;
     }
 
+    /* the shadow of the pages is now really in the center of the book */
     #c:after {
         left: 50%;
     }
 
+    /* to keep the content on the right page we need to adjust paddings */
     #p {
         padding-left: calc(50% + 3em);
         min-height: calc(100vh - 4em);
