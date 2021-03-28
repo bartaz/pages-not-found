@@ -49,7 +49,7 @@ box:
   clip: The box was very light
   text: |-
     The box was very light and something rattled inside with every step I made down the stairs to the ballroom, where all the birthday presents were gathered.
-    I was a bit suspicious why the Queen was so secretive about this. And why she just didn’t give it to the Princess herself?
+    I was a bit suspicious why the Queen was so secretive about this. And why didn’t she just give it to the Princess herself?
   next: [ deliver, peek ]
 
 deliver:
@@ -79,15 +79,15 @@ ball:
   clip: The celebrations were about to start
   text: |-
     The celebrations were about to start, so I returned for the Princess, and we joined her family and other guests in the throne room.
-    Everyone praised her beauty and well manners, and she seemed to enjoy all the admiration. They ate and drank and were merry all the evening and if not for the worried eyes of her father, you could almost forget about the curse…
-    After the ball has ended we moved all the presents to the Princess’s bedroom where she was joined by her father and the Queen to unveil the wonders of the gifts.
+    Everyone praised her beauty and well manners, and she seemed to enjoy all the admiration. They ate and drank and were merry all evening and if not for the worried eyes of her father, you could almost forget about the curse…
+    After the ball had ended we moved all the presents to the Princess’s bedroom where she was joined by her father and the Queen to unveil the wonders of the gifts.
   next: [ gift ]
 
 gift:
   clip: The small emerald box was the first one
   text: |-
     The small emerald box was the first one that caught her attention. Princess picked up the box, opened it curiously, reached inside and revealed an item she has never seen before in her life.
-    The King was terrified when he noticed a sharp point of a spindle in his daughter’s hand. The curse, after all, made it’s way to the Princess.
+    The King was terrified when he noticed a sharp point of a spindle in his daughter’s hand. The curse, after all, made its way to the Princess.
   next: [ look, jump ]
 
 look:
@@ -138,7 +138,7 @@ well:
   clip: Tempted by the shade and a cover
   text: |-
     Tempted by the shade and a cover the well could provide, I sneaked behind it. I was thirsty, but the pail was dry empty.
-    I peeked into the well to see if I can reach the water and the spindle that I was still holding in my hand, slipped from my fingers. It fell to the bottom of the spring and was lost to sight. Trying to lower the pail down the well, I leaned too far and in I fell.
+    I peeked into the well to see if I could reach the water and the spindle that I was still holding in my hand, slipped from my fingers. It fell to the bottom of the spring and was lost to sight. Trying to lower the pail down the well, I leaned too far and in I fell.
   next: [ fall ]
   need: spindle
   lose: [ spindle ]
@@ -170,7 +170,7 @@ moat:
 obey:
   clip: And so I went to live with her
   text: |-
-    And so I went to live with her. Days were passing by, but it felt like there was no time at all at this place. Every day I shook the beds until the feathers flew like snowflakes, I took the bread out of the over and picked the apples from the trees.
+    And so I went to live with her. Days were passing by, but it felt like there was no time at all at this place. Every day I shook the beds until the feathers flew like snowflakes, I took the bread out of the oven and picked the apples from the trees.
     For a long time I was happy there, but at last, I began to feel homesick and longed to go back to the Princess.
     “You have served me well and truly, and you shall not miss your reward,” the old woman said to me. “And for your honest and faithful work, I will grant you three wishes.”
   gain: [ wish, wish, wish ]
@@ -242,9 +242,9 @@ cut:
   lose: [ dagger ]
 
 tree:
-  clip: “Oh, I wish you would tell me where is the Princess”
+  clip: “Oh, I wish you would tell me where the Princess is”
   text: |-
-    “Oh, I wish you would tell me where is the Princess,” I cried helplessly. The dwarf fell silent and looked at me surprised, for the tree that kept his beard began to tremble. The fallen trunk lifted and grew back into the ground, and fresh green leaves sprouted from the branches.
+    “Oh, I wish you would tell me where the Princess is,” I cried helplessly. The dwarf fell silent and looked at me surprised, for the tree that kept his beard began to tremble. The fallen trunk lifted and grew back into the ground, and fresh green leaves sprouted from the branches.
     We looked at it in awe. The dwarf finally noticed that his beard was untangled and free again.
     “A witch!” he shouted terrified and ran away as fast as he could.
   next: [ follow ]
@@ -285,7 +285,7 @@ familiar:
   clip: The woman looked familiar
   text: |-
     The woman looked familiar. Something to her eyes seemed much younger and firm than the rest of her figure. I’ve seen these eyes before…
-    The old woman reached to the basket and pulled out one of the roses. And then I remembered those eyes. It was the Queen!
+    The old woman reached into the basket and pulled out one of the roses. And then I remembered those eyes. It was the Queen!
   next: [ rose, witch ]
 
 witch:
@@ -293,7 +293,7 @@ witch:
   text: |-
     Frightened, I rushed towards them crying out. The Princess dropped the rose and stepped back.
     “Leave her alone!” I said to the woman angrily. She straightened up and threw off her disguise. It indeed was the Queen herself.
-    “Stupid thing! You have no clue what you are dealing with! By defying the destiny, you will bring doom on us all!” she said outraged and disappeared in the shadows of the forest.
+    “Stupid thing! You have no clue what you are dealing with! By defying destiny, you will bring doom on us all!” she said outraged and disappeared in the shadows of the forest.
     We burned the roses and decided to leave at dawn. The dwarfs kept the watch outside the hut while I rested by the sleeping Princess.
     The light of the candle was dying out when my eyes closed.
   next: [ court ]
@@ -315,7 +315,7 @@ prince:
 kiss:
   clip: The Prince stepped back pushed away
   text: |-
-    The Prince stepped back pushed away by the Princess who was sitting there terrified in her crystal coffin. The Prince dropped to his knees, announced his love for the Princess, and asked her to be his wife.
+    The Prince stepped back, pushed away by the Princess who was sitting there terrified in her crystal coffin. The Prince dropped to his knees, announced his love for the Princess, and asked her to be his wife.
     The Princess was too frail and too scared to answer, so we all headed to the castle. The King was overjoyed to see his daughter, and even the Queen seemed content when we told the story of the Prince and the spell-lifting kiss.
   next: [ proposal ]
 
@@ -341,7 +341,7 @@ down:
 down2:
   clip: Down, down, down
   text: |-
-    Down, down, down… There was nothing else to do, so I started talking to myself. “I wonder how many miles I’ve fallen by this time?” I said out loud and my words echoed around me. “I wonder if I shall fall right through the earth!” Even that it was me saying these words, they felt alien and sounded like spoken by some else.
+    Down, down, down… There was nothing else to do, so I started talking to myself. “I wonder how many miles I’ve fallen by this time?” I said out loud and my words echoed around me. “I wonder if I shall fall right through the earth!” Even though it was me saying these words, they felt alien and sounded like they were spoken by someone else.
   next: [ down, open2 ]
 
 open2:
@@ -362,7 +362,7 @@ proposal:
   text: |-
     The King accepted his proposal, promised him half of the kingdom for lifting the curse and the wedding was soon announced.
     The only one unhappy about the turn of events was the Princess. She told her father and the Prince that, as grateful as she was, she does not want to be his bride.
-    The Prince got angry and threaten to invade the kingdom and take the land and the Princess by force if she refuses.
+    The Prince got angry and threatened to invade the kingdom and take the land and the Princess by force if she refuses.
   next: [ locked ]
 
 locked:
@@ -378,13 +378,13 @@ grow:
   text: |-
     “I am sure you will grow to love your prince. He is destined for you, after all,” I said trying to calm her.
     “You are just like my father and step-mother,” the Princess said bitterly and refused to speak to me again.
-    At the day of the wedding, when I finished lacing her dress, she glanced at herself in the mirror, then looked through the window and said: “I just wanted to be free as a bird.” She turned around, looked at me with her tearful eyes and run away.
+    On the day of the wedding, when I finished lacing her dress, she glanced at herself in the mirror, then looked through the window and said: “I just wanted to be free as a bird.” She turned around, looked at me with her tearful eyes and ran away.
     The Princess rushed upstairs to the top of the castle tower and jumped down into the river. For once, choosing her own destiny.
 
 escape:
   clip: “I can help you run away, Princess”
   text: |-
-    “I can help you run away, Princess. Hear my plan!” I said and explained what she should do when I prepare our escape.
+    “I can help you run away, Princess. Hear my plan!” I said and explained what she should do when I prepared our escape.
     One night when the clock struck twelve and the whole castle was sleeping, I sneaked into the Princess’s bedroom. She left one candle burning and was lying awake.
     “It’s the time dear Princess, now or never,” I said to her.
   next: [ geese, hunt ]
@@ -392,17 +392,17 @@ escape:
 geese:
   clip: I took the girl by the hand
   text: |-
-    I took the girl by the hand and led her down the stairs, through the kitchen and out of the castle. Through a hole in the walls we got down to the river bank and guided by the moonshine reflected in the waters we run away as fast as we can.
+    I took the girl by the hand and led her down the stairs, through the kitchen and out of the castle. Through a hole in the walls we got down to the river bank and guided by the moonshine reflected in the waters we ran away as fast as we could.
     For several days we followed the river by night, hiding in the shadows of the groves we passed by during the daylight.
-    One day we’ve met a very old woman who was gathering some grass for her geese and wild fruit for herself. We helped her carry the load, so she invited us to stay with her.
+    One day we met a very old woman who was gathering some grass for her geese and wild fruit for herself. We helped her carry the load, so she invited us to stay with her.
     And for a long time, we lived there with the old woman. Only sometimes at night, the Princess wept to the pillow missing her royal life and instead of tears, little pearls dropped from her crying eyes.
 
 hunt:
   clip: I pulled out the dagger
   text: |-
-    I pulled out the dagger, and we cut each other hair with its blade. We then changed to hunting dresses and cloaks and sneaked out of the castle to the stables.
-    Near the castle was a large, dark forest, so at the dawn, unrecognized under the hoods, we joined hunting expedition into the nearby forest.
-    In the depths of the forest, we left the hunters and rode away on our horses. On and on we went travelling to villages and towns living honest and hard-working life, free as birds.
+    I pulled out the dagger, and we cut each other’s hair with its blade. We then changed to hunting dresses and cloaks and sneaked out of the castle to the stables.
+    Near the castle was a large, dark forest, so at the dawn, unrecognized under the hoods, we joined a hunting expedition into the nearby forest.
+    In the depths of the forest, we left the hunters and rode away on our horses. On and on we went travelling to villages and towns living honest and hard-working lives, free as birds.
   need: dagger
   lose: [ dagger ]
 
@@ -410,7 +410,7 @@ happy:
   clip: “I wish for you to live happily ever after”
   text: |-
     “I wish for you to live happily ever after, Princess,” I said, and were it my words, or did she just accept that fate, the Princess wedded the Prince, and they soon became the king and the queen of the nearby land.
-    Soon after, the young king died in the battle leaving her with daughter to raise and the kingdom to rule. She led her people well and just, so she grew to be known far and wide not only for her beauty but for being fair and clever queen.
+    Soon after, the young king died in the battle leaving her with a daughter to raise and the kingdom to rule. She led her people well and just, so she grew to be known far and wide not only for her beauty but for being a fair and clever queen.
   need: wish
   lose: [ wish ]
 
@@ -449,7 +449,7 @@ cook:
 eat:
   clip: I was so very hungry
   text: |-
-    I was so very hungry that I’ve eaten most of the bread myself and only shared the rest of it with the old man. When we finished, I asked where I shall sleep.
+    I was so very hungry that I ate most of the bread myself and only shared the rest of it with the old man. When we finished, I asked where I shall sleep.
     “Upstairs you will find two rooms with a bed in each,” said the old man. “Make both beds before you sleep.”
   next: [ upstairs ]
   lose: [ bread ]
@@ -491,7 +491,7 @@ bed:
 prison:
   clip: With the book in my hands
   text: |-
-    With the book in my hands, I set down and waited thinking. What led me to here, could I do things differently?
+    With the book in my hands, I set down and waited thinking. What led me here, could I do things differently?
     I looked at the empty pages of the book and started writing down my story. Maybe some day some one would find it…
 
 book:
